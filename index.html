@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LivingWell Properties — Relatório Semanal 25-31 Mai 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0A0A0E;
+  --surf: #15151E;
+  --surf-2: #1C1C28;
+  --surf-3: #232333;
+  --border: rgba(232, 194, 108, 0.10);
+  --border-2: rgba(255, 255, 255, 0.06);
+  --text: #EDE9DD;
+  --text-2: #968F7E;
+  --text-3: #5A5547;
+  --gold: #E8C26C;
+  --gold-2: #C9A66B;
+  --gold-3: #8E7340;
+  --sage: #7FB58A;
+  --sage-bg: rgba(127, 181, 138, 0.12);
+  --coral: #E07A5F;
+  --coral-bg: rgba(224, 122, 95, 0.12);
+  --neutral-bg: rgba(149, 143, 126, 0.10);
+}
+
+html, body { background: var(--bg); color: var(--text); }
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  background-image:
+    radial-gradient(ellipse 1100px 600px at 50% -200px, rgba(232,194,108,0.06), transparent 70%),
+    radial-gradient(ellipse 700px 400px at 80% 200px, rgba(127,181,138,0.03), transparent 65%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  z-index: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 36px 28px 60px; position: relative; z-index: 1; }
+
+/* HERO */
+.hero { display: grid; grid-template-columns: 1.4fr 1fr; align-items: end; gap: 40px; padding: 36px 0 48px; border-bottom: 1px solid var(--border); position: relative; }
+.hero::after { content: ""; position: absolute; bottom: -1px; left: 0; width: 80px; height: 1px; background: var(--gold); }
+.hero-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; display: flex; align-items: center; gap: 14px; }
+.hero-eyebrow::before { content: "01"; font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--text-3); letter-spacing: 0; }
+.hero-title { font-family: 'Fraunces', serif; font-weight: 500; font-variation-settings: "opsz" 144; font-size: clamp(40px, 6.5vw, 64px); line-height: 0.96; letter-spacing: -0.025em; color: var(--text); margin-bottom: 16px; }
+.hero-title em { font-style: italic; font-weight: 400; color: var(--gold); }
+.hero-sub { font-size: 14px; color: var(--text-2); max-width: 460px; line-height: 1.55; }
+.hero-period { background: var(--surf); border: 1px solid var(--border); border-radius: 4px; padding: 24px 26px; }
+.hp-lbl { font-size: 9px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-3); margin-bottom: 10px; }
+.hp-dt { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 22px; color: var(--gold); letter-spacing: -0.01em; line-height: 1.15; }
+.hp-dt2 { font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 13px; color: var(--text-3); margin-top: 6px; letter-spacing: -0.01em; }
+
+/* SECTION HEADER */
+.sec-head { margin: 56px 0 22px; display: flex; align-items: baseline; gap: 18px; }
+.sec-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); letter-spacing: 0.1em; }
+.sec-num::after { content: " —"; color: var(--text-3); }
+.sec-title { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 26px; color: var(--text); letter-spacing: -0.015em; }
+.sec-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--border), transparent); align-self: center; margin-left: 4px; }
+
+/* ANÁLISE */
+.analise { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.an-card { background: var(--surf); border: 1px solid var(--border-2); border-radius: 4px; padding: 28px 30px; position: relative; }
+.an-card.acc-blue { border-top: 2px solid var(--gold); }
+.an-card.acc-red { border-top: 2px solid var(--coral); }
+.an-lbl { font-size: 10px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text-2); margin-bottom: 14px; display: inline-flex; align-items: center; gap: 10px; }
+.an-lbl .dot { width: 6px; height: 6px; border-radius: 50%; }
+.an-card.acc-blue .dot { background: var(--gold); }
+.an-card.acc-red .dot { background: var(--coral); }
+.an-text { font-family: 'Fraunces', serif; font-weight: 400; font-variation-settings: "opsz" 14; font-size: 15.5px; line-height: 1.65; color: var(--text); letter-spacing: -0.005em; }
+.an-text em { font-style: italic; color: var(--gold); }
+.an-text strong { font-weight: 600; color: var(--text); }
+
+/* KPI GRID */
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.kpi { background: var(--surf); border: 1px solid var(--border-2); border-radius: 4px; padding: 22px 22px 20px; position: relative; overflow: hidden; }
+.kpi-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text-2); margin-bottom: 14px; }
+.kpi-val { font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; font-weight: 500; font-size: 32px; line-height: 1; letter-spacing: -0.02em; color: var(--text); margin-bottom: 14px; }
+.kpi-val .u { font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 500; color: var(--text-2); margin-left: 2px; letter-spacing: 0; }
+.badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 9px; border-radius: 3px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0; }
+.badge.up { background: var(--sage-bg); color: var(--sage); }
+.badge.dn { background: var(--coral-bg); color: var(--coral); }
+.badge.nu { background: var(--neutral-bg); color: var(--text-2); }
+.kpi.lead-h { background: linear-gradient(135deg, #E8C26C 0%, #C9A66B 100%); border: 1px solid var(--gold); box-shadow: 0 0 40px rgba(232, 194, 108, 0.12); }
+.kpi.lead-h .kpi-lbl { color: rgba(10, 10, 14, 0.55); }
+.kpi.lead-h .kpi-val { color: #0A0A0E; font-size: 42px; font-weight: 600; }
+.kpi.lead-h .badge { background: rgba(10, 10, 14, 0.18); }
+.kpi.lead-h .badge.dn { color: #4A1410; background: rgba(74, 20, 16, 0.20); }
+.kpi.lead-h .badge.up { color: #14391A; background: rgba(20, 57, 26, 0.22); }
+
+/* RESUMO TABLE */
+.resumo-card { background: var(--surf); border: 1px solid var(--border-2); border-radius: 4px; overflow: hidden; }
+.twrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-family: 'Manrope', sans-serif; font-size: 9.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-3); padding: 16px 18px; border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.18); }
+td { padding: 14px 18px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 400; color: var(--text); border-bottom: 1px solid var(--border-2); }
+td.name { font-family: 'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 14px; color: var(--text); letter-spacing: -0.005em; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr.best td { background: rgba(232, 194, 108, 0.07); color: var(--gold); }
+
+/* IMÓVEL CARDS */
+.imovel { background: var(--surf); border: 1px solid var(--border-2); border-radius: 4px; margin-bottom: 24px; overflow: hidden; }
+.imovel-hdr { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; padding: 28px 30px 22px; border-bottom: 1px solid var(--border); position: relative; }
+.imovel-num { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 56px; line-height: 0.85; color: var(--gold); letter-spacing: -0.04em; }
+.imovel-meta .nm { font-family: 'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 24px; line-height: 1.15; color: var(--text); letter-spacing: -0.01em; margin-bottom: 6px; }
+.imovel-meta .sub { font-size: 11px; font-weight: 500; color: var(--text-3); letter-spacing: 0.05em; text-transform: uppercase; }
+.imovel-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; color: var(--text-3); text-align: right; letter-spacing: 0.08em; line-height: 1.5; }
+.imovel-tag .val { color: var(--gold); display: block; }
+.imovel.warn { border-top: 2px solid var(--coral); }
+.imovel.warn .imovel-num { color: var(--coral); }
+.imovel.win { border-top: 2px solid var(--sage); }
+.imovel.win .imovel-num { color: var(--sage); }
+
+.imovel-kpis { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px; background: var(--border-2); padding: 0; }
+.mkpi { background: var(--surf); padding: 20px 14px; text-align: left; }
+.mkpi .lbl { font-size: 8.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-3); margin-bottom: 10px; }
+.mkpi .val { font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; font-size: 17px; font-weight: 500; color: var(--text); letter-spacing: -0.015em; margin-bottom: 8px; line-height: 1; }
+.mkpi .val .u { font-family: 'Manrope', sans-serif; font-size: 11px; color: var(--text-2); font-weight: 500; }
+.mkpi .badge { font-size: 9.5px; padding: 2px 6px; }
+
+/* SUB-GRID */
+.sub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border-2); }
+.sub-cell { background: var(--surf); padding: 26px 28px; }
+.sub-cell h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-2); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+.sub-cell h4::before { content: ""; width: 18px; height: 1px; background: var(--gold); }
+
+/* BAR ROWS */
+.bar-row { display: grid; grid-template-columns: 76px 1fr 130px; align-items: center; gap: 14px; padding: 7px 0; font-size: 12px; border-bottom: 1px dashed rgba(255,255,255,0.04); }
+.bar-row:last-child { border-bottom: none; }
+.bar-row.has-lead { position: relative; }
+.bar-row.has-lead::before { content: ""; position: absolute; left: -10px; top: 50%; transform: translateY(-50%); width: 3px; height: 18px; background: var(--gold); border-radius: 2px; }
+.bar-row .blbl { font-family: 'Fraunces', serif; font-style: italic; font-size: 13.5px; font-weight: 500; color: var(--text); letter-spacing: -0.005em; }
+.bar-row .btrk { height: 9px; background: rgba(255,255,255,0.04); border-radius: 2px; overflow: hidden; position: relative; }
+.bar-row .bfill { height: 100%; background: linear-gradient(90deg, var(--gold-3) 0%, var(--gold) 100%); border-radius: 2px; box-shadow: 0 0 12px rgba(232,194,108,0.18); }
+.bar-row .bfill.pnk { background: linear-gradient(90deg, #94527A 0%, #D67BAA 100%); box-shadow: 0 0 12px rgba(214,123,170,0.18); }
+.bar-row .bfill.dim { background: linear-gradient(90deg, rgba(232,194,108,0.25) 0%, rgba(232,194,108,0.55) 100%); box-shadow: none; }
+.bar-row .bval { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 400; color: var(--text-2); text-align: right; letter-spacing: -0.005em; line-height: 1.4; }
+.bar-row .bval .lead-pill { display: inline-block; padding: 1px 6px; margin-right: 6px; border-radius: 2px; background: var(--gold); color: #0A0A0E; font-weight: 600; font-size: 9px; letter-spacing: 0.08em; }
+.bar-row .bval .pct { color: var(--text-3); margin-left: 4px; }
+
+/* MINI TABLE for zonas */
+.mini-tbl { width: 100%; }
+.mini-tbl th { padding: 8px 4px; font-size: 8.5px; letter-spacing: 0.2em; background: transparent; border-bottom: 1px solid var(--border); }
+.mini-tbl td { padding: 10px 4px; font-size: 12px; border-bottom: 1px solid var(--border-2); }
+.mini-tbl td.zn { font-family: 'Fraunces', serif; font-style: italic; font-size: 13px; font-weight: 500; color: var(--text); }
+.mini-tbl tr.lead td { color: var(--gold); }
+
+/* CRIATIVOS */
+.criativos { padding: 22px 30px 30px; border-top: 1px solid var(--border); background: rgba(0,0,0,0.18); }
+.criativos h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-2); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.criativos h4::before { content: "✦"; color: var(--gold); font-size: 12px; }
+.cri-tbl th { background: transparent; padding: 10px 12px; font-size: 9px; }
+.cri-tbl td { padding: 12px; font-size: 12px; border-bottom: 1px solid var(--border-2); }
+.cri-tbl tr:last-child td { border-bottom: none; }
+.cri-tbl tr.best td { background: rgba(232, 194, 108, 0.07); }
+.cri-tbl td.anm { font-family: 'Fraunces', serif; font-style: italic; font-size: 14px; font-weight: 500; color: var(--text); letter-spacing: -0.005em; }
+.cri-tbl tr.best td.anm { color: var(--gold); }
+
+/* ADS TOP */
+.ads-list { display: flex; flex-direction: column; gap: 1px; background: var(--border-2); }
+.ad-row { background: var(--surf); display: grid; grid-template-columns: 2.2fr repeat(5, 1fr); gap: 14px; padding: 18px 26px; align-items: center; }
+.ad-row .anm { font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; font-weight: 500; color: var(--text); letter-spacing: -0.005em; line-height: 1.3; }
+.ad-row .am .lbl { font-size: 8.5px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-3); margin-bottom: 4px; }
+.ad-row .am .val { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--text); letter-spacing: -0.01em; }
+.ad-row.best { background: rgba(232, 194, 108, 0.06); }
+.ad-row.best .anm { color: var(--gold); }
+
+/* DIÁRIO */
+.diario-card { background: var(--surf); border: 1px solid var(--border-2); border-radius: 4px; overflow: hidden; }
+.diario-card .date { font-family: 'Fraunces', serif; font-style: italic; font-size: 14px; font-weight: 500; color: var(--text); }
+.diario-card tr.ctrhi td { background: rgba(127, 181, 138, 0.08); color: var(--sage); }
+.diario-card tr.ctrhi td.date { color: var(--sage); }
+.diario-card tr.ctrlo td { background: rgba(224, 122, 95, 0.08); color: var(--coral); }
+.diario-card tr.ctrlo td.date { color: var(--coral); }
+.diario-card tr.idle td { color: var(--text-3); }
+.diario-card tr.idle td.date { color: var(--text-3); font-style: italic; }
+
+/* FOOTER */
+.foot-wrap { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); position: relative; }
+.foot-wrap::before { content: ""; position: absolute; top: -1px; left: 0; width: 60px; height: 1px; background: var(--gold); }
+.foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 10px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text-3); }
+.foot .right { color: var(--gold); }
+
+/* RESPONSIVE */
+@media (max-width: 760px) {
+  .wrap { padding: 24px 18px 40px; }
+  .hero { grid-template-columns: 1fr; gap: 28px; padding: 20px 0 36px; }
+  .hero-title { font-size: 40px; }
+  .hero-period { padding: 18px 20px; }
+  .analise { grid-template-columns: 1fr; }
+  .kpis { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .kpi-val { font-size: 26px; }
+  .kpi.lead-h .kpi-val { font-size: 34px; }
+  .imovel-hdr { grid-template-columns: 1fr; gap: 14px; padding: 24px 22px 18px; }
+  .imovel-num { font-size: 44px; }
+  .imovel-meta .nm { font-size: 21px; }
+  .imovel-tag { text-align: left; }
+  .imovel-kpis { grid-template-columns: repeat(3, 1fr); }
+  .sub-grid { grid-template-columns: 1fr; }
+  .sub-cell { padding: 22px 22px; }
+  .bar-row { grid-template-columns: 70px 1fr 110px; gap: 10px; font-size: 11px; }
+  .bar-row .blbl { font-size: 12.5px; }
+  .ad-row { grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px; }
+  .ad-row .anm { grid-column: 1 / -1; margin-bottom: 6px; }
+  .criativos { padding: 18px 22px 22px; }
+  .sec-head { margin: 40px 0 18px; }
+  .sec-title { font-size: 22px; }
+  th, td { padding: 12px 12px; font-size: 11.5px; }
+  th { font-size: 9px; }
+}
+@media (max-width: 460px) {
+  .kpis { grid-template-columns: 1fr; }
+  .imovel-kpis { grid-template-columns: repeat(2, 1fr); }
+  .ad-row { grid-template-columns: 1fr; }
+  .ad-row .am { display: flex; justify-content: space-between; align-items: center; }
+  .ad-row .am .lbl { margin-bottom: 0; }
+  .bar-row { grid-template-columns: 60px 1fr; }
+  .bar-row .bval { grid-column: 2; text-align: left; padding-top: 4px; }
+}
+
+/* PRINT */
+@media print {
+  body { background: var(--bg) !important; color: var(--text) !important; }
+  body::before { display: none; }
+  .wrap { max-width: 100%; padding: 18px; }
+  .hero, .imovel, .kpi, .resumo-card, .diario-card, .an-card, .ad-row { break-inside: avoid; page-break-inside: avoid; }
+  .sub-grid, .imovel-kpis, .kpis { break-inside: avoid; }
+  .an-text { orphans: 3; widows: 3; }
+  .twrap { overflow: visible; }
+  a { text-decoration: none; color: inherit; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-l">
+      <div class="hero-eyebrow">Relatório Semanal de Performance</div>
+      <h1 class="hero-title">LivingWell<br><em>Properties</em></h1>
+      <p class="hero-sub">Semana de aceleração — investimento dobrou, leads multiplicaram por 4,5 e o CPL caiu para menos de metade. Dois imóveis ativos: Terreno Aroeira (recuperou em força) e Moradia V3+1 Aroeira.</p>
+    </div>
+    <div class="hero-period">
+      <div class="hp-lbl">Período</div>
+      <div class="hp-dt">25 — 31 MAI 2026</div>
+      <div class="hp-dt2">vs. 18 — 24 MAI 2026</div>
+    </div>
+  </header>
+
+  <!-- ANÁLISE -->
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <span class="sec-title">Leitura da semana</span>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="analise">
+    <div class="an-card acc-blue">
+      <div class="an-lbl"><span class="dot"></span>Resumo Geral</div>
+      <p class="an-text">
+        Semana de aceleração forte. O investimento dobrou para <strong>59,86 €</strong>, mas os leads <em>multiplicaram por mais de quatro vezes</em> — de dois para nove — e o custo por lead caiu para menos de metade, passando de 14,69 € para <strong>6,65 €</strong>. A grande virada veio do <strong>Terreno Aroeira</strong>, que tinha tido zero leads na semana anterior e agora produziu seis com CPL de 5,12 €. A faixa <em>65+</em> deste imóvel, que estava a queimar dinheiro sem converter, foi responsável por quatro dos seis leads. O Moradia V3+1 manteve volume saudável (três leads, CPL 9,71 €), mas perdeu alguma eficiência. O CTR global caiu para 1,60% — normal após uma expansão de alcance desta dimensão.
+      </p>
+    </div>
+    <div class="an-card acc-red">
+      <div class="an-lbl"><span class="dot"></span>Plano de Ação</div>
+      <p class="an-text">
+        O resultado é claramente positivo, mas duas métricas estão a degradar e merecem atenção: o CTR caiu de 2,84% para <em>1,60%</em> e o CPC subiu para 0,26 €. A causa provável é simples — para conseguir nove leads, o alcance mais que duplicou e o algoritmo está agora a entregar para públicos mais frios. Não é um problema, é o custo natural da escalada. Para consolidar, há duas frentes. Primeiro, <strong>adicionar variações criativas no Terreno Aroeira</strong> em formato Reels e Stories de Instagram, já que actualmente 96% do gasto deste imóvel vai para o Facebook (29,67 €) e apenas 1,06 € chega ao Instagram. Segundo, <strong>ajustar o orçamento do Moradia V3+1</strong>: a faixa 45-54 consumiu 9,89 € (34% do gasto) sem gerar leads, enquanto a 35-44 deu dois dos três leads com apenas 4,95 €. Recomenda-se transferir verba da 45-54 para 35-44 e 65+. Esperamos consolidar o CPL abaixo de 7 € e recuperar parte do CTR na próxima semana.
+      </p>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <span class="sec-title">Indicadores principais</span>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="kpi-lbl">Investimento</div>
+      <div class="kpi-val">59,86<span class="u">€</span></div>
+      <span class="badge nu">↑ 103,74%</span>
+    </div>
+    <div class="kpi lead-h">
+      <div class="kpi-lbl">Leads</div>
+      <div class="kpi-val">9</div>
+      <span class="badge up">↑ 350,00%</span>
+    </div>
+    <div class="kpi">
+      <div class="kpi-lbl">Alcance</div>
+      <div class="kpi-val">9.044</div>
+      <span class="badge up">↑ 133,76%</span>
+    </div>
+    <div class="kpi">
+      <div class="kpi-lbl">Impressões</div>
+      <div class="kpi-val">14.455</div>
+      <span class="badge up">↑ 195,85%</span>
+    </div>
+    <div class="kpi">
+      <div class="kpi-lbl">Cliques</div>
+      <div class="kpi-val">232</div>
+      <span class="badge up">↑ 66,91%</span>
+    </div>
+    <div class="kpi">
+      <div class="kpi-lbl">CPL</div>
+      <div class="kpi-val">6,65<span class="u">€</span></div>
+      <span class="badge up">↓ 54,73%</span>
+    </div>
+    <div class="kpi">
+      <div class="kpi-lbl">CTR</div>
+      <div class="kpi-val">1,60<span class="u">%</span></div>
+      <span class="badge dn">↓ 43,66%</span>
+    </div>
+    <div class="kpi">
+      <div class="kpi-lbl">CPM</div>
+      <div class="kpi-val">4,14<span class="u">€</span></div>
+      <span class="badge up">↓ 31,11%</span>
+    </div>
+    <div class="kpi">
+      <div class="kpi-lbl">CPC</div>
+      <div class="kpi-val">0,26<span class="u">€</span></div>
+      <span class="badge dn">↑ 23,81%</span>
+    </div>
+  </div>
+
+  <!-- RESUMO CONJUNTOS -->
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <span class="sec-title">Conjuntos de anúncios — visão geral</span>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="resumo-card">
+    <div class="twrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Conjunto · Imóvel</th>
+            <th>Invest.</th>
+            <th>Leads</th>
+            <th>CPL</th>
+            <th>CTR</th>
+            <th>Freq.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="best">
+            <td class="name">Terreno Aroeira</td>
+            <td>30,73 €</td>
+            <td>6</td>
+            <td>5,12 €</td>
+            <td>1,05 %</td>
+            <td>1,60</td>
+          </tr>
+          <tr>
+            <td class="name">Moradia V3+1 Aroeira</td>
+            <td>29,13 €</td>
+            <td>3</td>
+            <td>9,71 €</td>
+            <td>2,60 %</td>
+            <td>1,60</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- DETALHE POR IMÓVEL -->
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <span class="sec-title">Detalhe por imóvel</span>
+    <span class="sec-rule"></span>
+  </div>
+
+  <!-- IMÓVEL 01 — TERRENO AROEIRA (winner this week) -->
+  <div class="imovel win">
+    <div class="imovel-hdr">
+      <div class="imovel-num">01</div>
+      <div class="imovel-meta">
+        <div class="nm">Terreno — Aroeira</div>
+        <div class="sub">[TERRENO AROEIRA] [OPEN] [18-65+] [IG/FB] 02/04</div>
+      </div>
+      <div class="imovel-tag">
+        ESTADO<span class="val" style="color:var(--sage)">RECUPEROU</span>
+      </div>
+    </div>
+
+    <div class="imovel-kpis">
+      <div class="mkpi">
+        <div class="lbl">Invest.</div>
+        <div class="val">30,73<span class="u"> €</span></div>
+        <span class="badge nu">↑ 113,5%</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">Leads</div>
+        <div class="val">6</div>
+        <span class="badge up">0 → 6</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">CPL</div>
+        <div class="val">5,12<span class="u"> €</span></div>
+        <span class="badge up">NOVO</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">CTR</div>
+        <div class="val">1,05<span class="u"> %</span></div>
+        <span class="badge dn">↓ 58,2%</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">CPC</div>
+        <div class="val">0,31<span class="u"> €</span></div>
+        <span class="badge dn">↑ 40,9%</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">Alcance</div>
+        <div class="val">5.806</div>
+        <span class="badge nu">—</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">Freq.</div>
+        <div class="val">1,60</div>
+        <span class="badge nu">—</span>
+      </div>
+    </div>
+
+    <div class="sub-grid">
+      <!-- FAIXA ETÁRIA -->
+      <div class="sub-cell">
+        <h4>Faixa Etária</h4>
+        <div class="bar-row">
+          <span class="blbl">18 — 24</span>
+          <span class="btrk"><span class="bfill dim" style="width:0.85%"></span></span>
+          <span class="bval">0 leads · 0,17 €</span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">25 — 34</span>
+          <span class="btrk"><span class="bfill dim" style="width:6.5%"></span></span>
+          <span class="bval">0 leads · 1,30 €</span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">35 — 44</span>
+          <span class="btrk"><span class="bfill dim" style="width:9.8%"></span></span>
+          <span class="bval">0 leads · 1,96 €</span>
+        </div>
+        <div class="bar-row has-lead">
+          <span class="blbl">45 — 54</span>
+          <span class="btrk"><span class="bfill" style="width:10.5%"></span></span>
+          <span class="bval"><span class="lead-pill">2 LEADS</span>2,10 €</span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">55 — 64</span>
+          <span class="btrk"><span class="bfill dim" style="width:25.7%"></span></span>
+          <span class="bval">0 leads · 5,16 €</span>
+        </div>
+        <div class="bar-row has-lead">
+          <span class="blbl">65+</span>
+          <span class="btrk"><span class="bfill" style="width:100%"></span></span>
+          <span class="bval"><span class="lead-pill">4 LEADS</span>20,04 € <span class="pct">65%</span></span>
+        </div>
+      </div>
+
+      <!-- GÉNERO -->
+      <div class="sub-cell">
+        <h4>Género</h4>
+        <div class="bar-row has-lead">
+          <span class="blbl">Feminino</span>
+          <span class="btrk"><span class="bfill pnk" style="width:38.1%"></span></span>
+          <span class="bval"><span class="lead-pill">2 LEADS</span>8,34 €</span>
+        </div>
+        <div class="bar-row has-lead">
+          <span class="blbl">Masculino</span>
+          <span class="btrk"><span class="bfill" style="width:100%"></span></span>
+          <span class="bval"><span class="lead-pill">4 LEADS</span>21,91 €</span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">N/I</span>
+          <span class="btrk"><span class="bfill dim" style="width:2.2%"></span></span>
+          <span class="bval">0 leads · 0,48 €</span>
+        </div>
+      </div>
+
+      <!-- TOP ZONAS -->
+      <div class="sub-cell">
+        <h4>Top Zonas</h4>
+        <table class="mini-tbl">
+          <thead>
+            <tr><th>Distrito</th><th style="text-align:right">Cliques</th><th style="text-align:right">Invest.</th><th style="text-align:right">CPL</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="zn">Lisboa</td><td style="text-align:right">10</td><td style="text-align:right">6,93 €</td><td style="text-align:right">—</td></tr>
+            <tr><td class="zn">Setúbal</td><td style="text-align:right">12</td><td style="text-align:right">3,78 €</td><td style="text-align:right">—</td></tr>
+            <tr><td class="zn">Porto</td><td style="text-align:right">13</td><td style="text-align:right">3,21 €</td><td style="text-align:right">—</td></tr>
+            <tr><td class="zn">Braga</td><td style="text-align:right">6</td><td style="text-align:right">2,12 €</td><td style="text-align:right">—</td></tr>
+            <tr><td class="zn">Faro</td><td style="text-align:right">5</td><td style="text-align:right">1,95 €</td><td style="text-align:right">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PLATAFORMA -->
+      <div class="sub-cell">
+        <h4>Plataforma de Entrega</h4>
+        <div class="bar-row has-lead">
+          <span class="blbl">Facebook</span>
+          <span class="btrk"><span class="bfill" style="width:100%"></span></span>
+          <span class="bval"><span class="lead-pill">6 LEADS</span>29,67 € <span class="pct">96%</span></span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">Instagram</span>
+          <span class="btrk"><span class="bfill dim" style="width:3.6%"></span></span>
+          <span class="bval">0 leads · 1,06 € <span class="pct">4%</span></span>
+        </div>
+        <p style="margin-top:14px; font-size:11px; color:var(--text-3); font-style:italic; line-height:1.5;">
+          Distribuição extremamente desequilibrada — quase todo o orçamento entra via Facebook. Espaço claro para testar criativos próprios para Instagram.
+        </p>
+      </div>
+    </div>
+
+    <!-- CRIATIVOS -->
+    <div class="criativos">
+      <h4>Top criativos deste imóvel</h4>
+      <div class="twrap">
+        <table class="cri-tbl">
+          <thead>
+            <tr><th>Anúncio</th><th>Invest.</th><th>Leads</th><th>CPL</th><th>CTR</th><th>CPC</th></tr>
+          </thead>
+          <tbody>
+            <tr class="best">
+              <td class="anm">AD05 — Terreno Aroeira</td>
+              <td>29,83 €</td>
+              <td>6</td>
+              <td>4,97 €</td>
+              <td>1,03 %</td>
+              <td>0,31 €</td>
+            </tr>
+            <tr>
+              <td class="anm">AD04 — Terreno Aroeira</td>
+              <td>0,90 €</td>
+              <td>0</td>
+              <td>—</td>
+              <td>2,40 %</td>
+              <td>0,30 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMÓVEL 02 — MORADIA V3+1 AROEIRA -->
+  <div class="imovel">
+    <div class="imovel-hdr">
+      <div class="imovel-num">02</div>
+      <div class="imovel-meta">
+        <div class="nm">Moradia V3+1 — Aroeira</div>
+        <div class="sub">[MORADIA V3+1 AROEIRA] [OPEN] [18-65+] [IG/FB] 13/04</div>
+      </div>
+      <div class="imovel-tag">
+        ESTADO<span class="val">SAUDÁVEL</span>
+      </div>
+    </div>
+
+    <div class="imovel-kpis">
+      <div class="mkpi">
+        <div class="lbl">Invest.</div>
+        <div class="val">29,13<span class="u"> €</span></div>
+        <span class="badge nu">↑ 94,3%</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">Leads</div>
+        <div class="val">3</div>
+        <span class="badge up">↑ 50,0%</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">CPL</div>
+        <div class="val">9,71<span class="u"> €</span></div>
+        <span class="badge dn">↑ 29,5%</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">CTR</div>
+        <div class="val">2,60<span class="u"> %</span></div>
+        <span class="badge dn">↓ 18,8%</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">CPC</div>
+        <div class="val">0,22<span class="u"> €</span></div>
+        <span class="badge dn">↑ 10,0%</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">Alcance</div>
+        <div class="val">3.210</div>
+        <span class="badge nu">—</span>
+      </div>
+      <div class="mkpi">
+        <div class="lbl">Freq.</div>
+        <div class="val">1,60</div>
+        <span class="badge nu">—</span>
+      </div>
+    </div>
+
+    <div class="sub-grid">
+      <!-- FAIXA ETÁRIA -->
+      <div class="sub-cell">
+        <h4>Faixa Etária</h4>
+        <div class="bar-row">
+          <span class="blbl">18 — 24</span>
+          <span class="btrk"><span class="bfill dim" style="width:30.4%"></span></span>
+          <span class="bval">0 leads · 3,01 €</span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">25 — 34</span>
+          <span class="btrk"><span class="bfill dim" style="width:29.4%"></span></span>
+          <span class="bval">0 leads · 2,91 €</span>
+        </div>
+        <div class="bar-row has-lead">
+          <span class="blbl">35 — 44</span>
+          <span class="btrk"><span class="bfill" style="width:50.0%"></span></span>
+          <span class="bval"><span class="lead-pill">2 LEADS</span>4,95 €</span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">45 — 54</span>
+          <span class="btrk"><span class="bfill dim" style="width:100%"></span></span>
+          <span class="bval">0 leads · 9,89 € <span class="pct">34%</span></span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">55 — 64</span>
+          <span class="btrk"><span class="bfill dim" style="width:46.3%"></span></span>
+          <span class="bval">0 leads · 4,58 €</span>
+        </div>
+        <div class="bar-row has-lead">
+          <span class="blbl">65+</span>
+          <span class="btrk"><span class="bfill" style="width:38.3%"></span></span>
+          <span class="bval"><span class="lead-pill">1 LEAD</span>3,79 €</span>
+        </div>
+      </div>
+
+      <!-- GÉNERO -->
+      <div class="sub-cell">
+        <h4>Género</h4>
+        <div class="bar-row has-lead">
+          <span class="blbl">Feminino</span>
+          <span class="btrk"><span class="bfill pnk" style="width:53.6%"></span></span>
+          <span class="bval"><span class="lead-pill">2 LEADS</span>10,09 €</span>
+        </div>
+        <div class="bar-row has-lead">
+          <span class="blbl">Masculino</span>
+          <span class="btrk"><span class="bfill" style="width:100%"></span></span>
+          <span class="bval"><span class="lead-pill">1 LEAD</span>18,81 €</span>
+        </div>
+        <div class="bar-row">
+          <span class="blbl">N/I</span>
+          <span class="btrk"><span class="bfill dim" style="width:1.2%"></span></span>
+          <span class="bval">0 leads · 0,23 €</span>
+        </div>
+      </div>
+
+      <!-- TOP ZONAS -->
+      <div class="sub-cell">
+        <h4>Top Zonas</h4>
+        <table class="mini-tbl">
+          <thead>
+            <tr><th>Distrito</th><th style="text-align:right">Cliques</th><th style="text-align:right">Invest.</th><th style="text-align:right">CPL</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="zn">Lisboa</td><td style="text-align:right">42</td><td style="text-align:right">11,28 €</td><td style="text-align:right">—</td></tr>
+            <tr><td class="zn">Setúbal</td><td style="text-align:right">40</td><td style="text-align:right">6,69 €</td><td style="text-align:right">—</td></tr>
+            <tr><td class="zn">Coimbra</td><td style="text-align:right">7</td><td style="text-align:right">1,84 €</td><td style="text-align:right">—</td></tr>
+            <tr><td class="zn">Porto</td><td style="text-align:right">3</td><td style="text-align:right">1,06 €</td><td style="text-align:right">—</td></tr>
+            <tr><td class="zn">Aveiro</td><td style="text-align:right">2</td><td style="text-align:right">1,05 €</td><td style="text-align:right">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PLATAFORMA -->
+      <div class="sub-cell">
+        <h4>Plataforma de Entrega</h4>
+        <div class="bar-row has-lead">
+          <span class="blbl">Facebook</span>
+          <span class="btrk"><span class="bfill" style="width:100%"></span></span>
+          <span class="bval"><span class="lead-pill">2 LEADS</span>15,78 € <span class="pct">54%</span></span>
+        </div>
+        <div class="bar-row has-lead">
+          <span class="blbl">Instagram</span>
+          <span class="btrk"><span class="bfill" style="width:84.6%"></span></span>
+          <span class="bval"><span class="lead-pill">1 LEAD</span>13,35 € <span class="pct">46%</span></span>
+        </div>
+        <p style="margin-top:14px; font-size:11px; color:var(--text-3); font-style:italic; line-height:1.5;">
+          Distribuição equilibrada entre Facebook e Instagram, ambos a converter. Setup actual a funcionar — manter.
+        </p>
+      </div>
+    </div>
+
+    <!-- CRIATIVOS -->
+    <div class="criativos">
+      <h4>Top criativos deste imóvel</h4>
+      <div class="twrap">
+        <table class="cri-tbl">
+          <thead>
+            <tr><th>Anúncio</th><th>Invest.</th><th>Leads</th><th>CPL</th><th>CTR</th><th>CPC</th></tr>
+          </thead>
+          <tbody>
+            <tr class="best">
+              <td class="anm">AD01 — Moradia V3+1 Aroeira</td>
+              <td>5,02 €</td>
+              <td>1</td>
+              <td>5,02 €</td>
+              <td>2,63 %</td>
+              <td>0,26 €</td>
+            </tr>
+            <tr>
+              <td class="anm">AD04 — Moradia V3+1 Aroeira</td>
+              <td>14,62 €</td>
+              <td>2</td>
+              <td>7,31 €</td>
+              <td>2,65 %</td>
+              <td>0,19 €</td>
+            </tr>
+            <tr>
+              <td class="anm">AD07 — Moradia V3+1 Aroeira</td>
+              <td>9,18 €</td>
+              <td>0</td>
+              <td>—</td>
+              <td>2,50 %</td>
+              <td>0,26 €</td>
+            </tr>
+            <tr>
+              <td class="anm">AD03 — Moradia V3+1 Aroeira</td>
+              <td>0,31 €</td>
+              <td>0</td>
+              <td>—</td>
+              <td>2,27 %</td>
+              <td>0,31 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP ANÚNCIOS DA CONTA -->
+  <div class="sec-head">
+    <span class="sec-num">06</span>
+    <span class="sec-title">Top anúncios da conta</span>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="resumo-card">
+    <div class="ads-list">
+      <div class="ad-row best">
+        <div class="anm">AD05 — Terreno Aroeira</div>
+        <div class="am"><div class="lbl">Invest.</div><div class="val">29,83 €</div></div>
+        <div class="am"><div class="lbl">Leads</div><div class="val">6</div></div>
+        <div class="am"><div class="lbl">CPL</div><div class="val">4,97 €</div></div>
+        <div class="am"><div class="lbl">CTR</div><div class="val">1,03 %</div></div>
+        <div class="am"><div class="lbl">CPC</div><div class="val">0,31 €</div></div>
+      </div>
+      <div class="ad-row">
+        <div class="anm">AD04 — Moradia V3+1 Aroeira</div>
+        <div class="am"><div class="lbl">Invest.</div><div class="val">14,62 €</div></div>
+        <div class="am"><div class="lbl">Leads</div><div class="val">2</div></div>
+        <div class="am"><div class="lbl">CPL</div><div class="val">7,31 €</div></div>
+        <div class="am"><div class="lbl">CTR</div><div class="val">2,65 %</div></div>
+        <div class="am"><div class="lbl">CPC</div><div class="val">0,19 €</div></div>
+      </div>
+      <div class="ad-row">
+        <div class="anm">AD07 — Moradia V3+1 Aroeira</div>
+        <div class="am"><div class="lbl">Invest.</div><div class="val">9,18 €</div></div>
+        <div class="am"><div class="lbl">Leads</div><div class="val">0</div></div>
+        <div class="am"><div class="lbl">CPL</div><div class="val">—</div></div>
+        <div class="am"><div class="lbl">CTR</div><div class="val">2,50 %</div></div>
+        <div class="am"><div class="lbl">CPC</div><div class="val">0,26 €</div></div>
+      </div>
+      <div class="ad-row">
+        <div class="anm">AD01 — Moradia V3+1 Aroeira</div>
+        <div class="am"><div class="lbl">Invest.</div><div class="val">5,02 €</div></div>
+        <div class="am"><div class="lbl">Leads</div><div class="val">1</div></div>
+        <div class="am"><div class="lbl">CPL</div><div class="val">5,02 €</div></div>
+        <div class="am"><div class="lbl">CTR</div><div class="val">2,63 %</div></div>
+        <div class="am"><div class="lbl">CPC</div><div class="val">0,26 €</div></div>
+      </div>
+      <div class="ad-row">
+        <div class="anm">AD04 — Terreno Aroeira</div>
+        <div class="am"><div class="lbl">Invest.</div><div class="val">0,90 €</div></div>
+        <div class="am"><div class="lbl">Leads</div><div class="val">0</div></div>
+        <div class="am"><div class="lbl">CPL</div><div class="val">—</div></div>
+        <div class="am"><div class="lbl">CTR</div><div class="val">2,40 %</div></div>
+        <div class="am"><div class="lbl">CPC</div><div class="val">0,30 €</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIÁRIO -->
+  <div class="sec-head">
+    <span class="sec-num">07</span>
+    <span class="sec-title">Evolução diária</span>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="diario-card">
+    <div class="twrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th style="text-align:right">Invest.</th>
+            <th style="text-align:right">Leads</th>
+            <th style="text-align:right">Cliques</th>
+            <th style="text-align:right">CTR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="date">25 mai · seg</td><td style="text-align:right">7,70 €</td><td style="text-align:right">1</td><td style="text-align:right">25</td><td style="text-align:right">2,02 %</td></tr>
+          <tr class="ctrhi"><td class="date">26 mai · ter</td><td style="text-align:right">8,22 €</td><td style="text-align:right">0</td><td style="text-align:right">36</td><td style="text-align:right">3,01 %</td></tr>
+          <tr class="idle"><td class="date">27 mai · qua</td><td style="text-align:right">0,00 €</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">—</td></tr>
+          <tr class="idle"><td class="date">28 mai · qui</td><td style="text-align:right">0,00 €</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">—</td></tr>
+          <tr><td class="date">29 mai · sex</td><td style="text-align:right">15,38 €</td><td style="text-align:right">4</td><td style="text-align:right">69</td><td style="text-align:right">1,78 %</td></tr>
+          <tr><td class="date">30 mai · sáb</td><td style="text-align:right">17,06 €</td><td style="text-align:right">3</td><td style="text-align:right">62</td><td style="text-align:right">1,33 %</td></tr>
+          <tr class="ctrlo"><td class="date">31 mai · dom</td><td style="text-align:right">11,50 €</td><td style="text-align:right">1</td><td style="text-align:right">40</td><td style="text-align:right">1,14 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="foot-wrap">
+    <div class="foot">
+      <span>4Improvements · Meta MCP · v21.0</span>
+      <span class="right">05 Jun 2026 · LivingWell Properties</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
