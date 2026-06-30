@@ -1,52 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Relatório Meta Ads — LivingWell Properties — 15 Jun 2026</title>
+<title>LivingWell Properties — Relatório 22-28 Jun 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+*, *::before, *::after { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; box-sizing: border-box; margin: 0; padding: 0; }
 :root{--bg:#0A0A0E;--surf:#15151E;--surf-2:#1C1C28;--border:rgba(232,194,108,.10);--border-2:rgba(255,255,255,.06);--text:#EDE9DD;--text-2:#968F7E;--text-3:#5A5547;--gold:#E8C26C;--gold-2:#C9A66B;--gold-3:#8E7340;--sage:#7FB58A;--sage-bg:rgba(127,181,138,.12);--coral:#E07A5F;--coral-bg:rgba(224,122,95,.12);--neutral-bg:rgba(149,143,126,.10)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{background:radial-gradient(ellipse at 20% 0%,rgba(232,194,108,.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 0%,rgba(127,181,138,.03) 0%,transparent 50%),var(--bg);color:var(--text);font-family:'Manrope',sans-serif;font-size:14px;line-height:1.6;min-height:100vh}
-.noise{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:.025}
-.wrap{max-width:960px;margin:0 auto;padding:36px 28px 64px}
-.hero{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border-2);gap:24px;flex-wrap:wrap}
-.eyebrow{font-family:'Manrope',sans-serif;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.025}
+.wrap{max-width:960px;margin:0 auto;padding:36px 28px 64px;position:relative;z-index:1}
+
+/* HERO */
+.hero{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border-2);gap:24px;flex-wrap:wrap;position:relative}
+.hero::after{content:"";position:absolute;bottom:-1px;left:0;width:80px;height:1px;background:var(--gold)}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .eyebrow .n{font-family:'JetBrains Mono',monospace;color:var(--text-3);margin-right:8px}
-.hero-title{font-family:'Fraunces',serif;font-size:clamp(40px,6.5vw,64px);font-weight:400;line-height:1.08;letter-spacing:-.02em;margin-bottom:12px}
-.hero-title em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:12px;color:var(--text-2);font-weight:400}
-.period-card{background:var(--surf);border:1px solid var(--border-2);border-radius:4px;padding:20px 24px;min-width:210px;flex-shrink:0}
-.period-val{font-family:'JetBrains Mono',monospace;font-size:22px;color:var(--gold);font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
-.period-vs{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-3);margin-top:4px}
-.sh{display:flex;align-items:baseline;gap:14px;margin:48px 0 22px}
-.sh-n{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-3)}
-.sh-t{font-family:'Fraunces',serif;font-size:26px;font-style:italic;font-weight:400;color:var(--text)}
+.hero-title{font-family:'Fraunces',serif;font-size:clamp(40px,6.5vw,64px);font-weight:500;line-height:1.05;letter-spacing:-.025em;margin-bottom:14px}
+.hero-title em{font-style:italic;color:var(--gold);font-weight:400}
+.hero-sub{font-size:12px;color:var(--text-2);font-weight:400;max-width:460px;line-height:1.55}
+.period-card{background:var(--surf);border:1px solid var(--border);border-radius:4px;padding:22px 26px;min-width:230px;flex-shrink:0}
+.period-lbl{font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--text-3);margin-bottom:10px}
+.period-val{font-family:'JetBrains Mono',monospace;font-size:22px;color:var(--gold);font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap;line-height:1.15}
+.period-vs{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-3);margin-top:6px}
+
+/* SECTION HEADER */
+.sh{display:flex;align-items:baseline;gap:16px;margin:56px 0 22px}
+.sh-n{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);font-weight:500;letter-spacing:.1em}
+.sh-n::after{content:" —";color:var(--text-3)}
+.sh-t{font-family:'Fraunces',serif;font-size:26px;font-style:italic;font-weight:400;color:var(--text);letter-spacing:-.015em}
 .sh-l{flex:1;height:1px;background:linear-gradient(90deg,var(--border-2) 0%,transparent 100%)}
+
+/* KPIs */
 .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .kc{background:var(--surf);border:1px solid var(--border-2);border-radius:4px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:6px}
 .kc.leads{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);border-color:var(--gold-3);box-shadow:0 0 40px rgba(232,194,108,.12)}
 .kl{font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--text-2)}
-.kc.leads .kl{color:rgba(10,10,14,.60)}
+.kc.leads .kl{color:rgba(10,10,14,.6)}
 .kvr{display:flex;align-items:baseline;gap:4px}
-.kv{font-family:'JetBrains Mono',monospace;font-size:32px;font-weight:400;font-variant-numeric:tabular-nums;color:var(--text);line-height:1}
-.kc.leads .kv{font-size:42px;color:#0A0A0E}
-.ku{font-family:'Manrope',sans-serif;font-size:16px;color:var(--text-2)}
-.kc.leads .ku{color:rgba(10,10,14,.50)}
-.kd{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;padding:2px 7px;border-radius:3px;display:inline-block;width:fit-content}
+.kv{font-family:'JetBrains Mono',monospace;font-size:32px;font-weight:500;font-variant-numeric:tabular-nums;color:var(--text);line-height:1}
+.kc.leads .kv{font-size:42px;color:#0A0A0E;font-weight:600}
+.ku{font-family:'Manrope',sans-serif;font-size:16px;color:var(--text-2);font-weight:500}
+.kc.leads .ku{color:rgba(10,10,14,.5)}
+.kd{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;padding:3px 7px;border-radius:3px;display:inline-block;width:fit-content}
 .kd.s{color:var(--sage);background:var(--sage-bg)}
 .kd.c{color:var(--coral);background:var(--coral-bg)}
 .kd.n{color:var(--text-2);background:var(--neutral-bg)}
-.kc.leads .kd{background:rgba(10,10,14,.18);color:#0A0A0E}
+.kc.leads .kd{background:rgba(10,10,14,.18)}
+.kc.leads .kd.s{color:#14391A;background:rgba(20,57,26,.22)}
+.kc.leads .kd.c{color:#4A1410;background:rgba(74,20,16,.20)}
+
+/* IMÓVEL CARDS */
 .ac{background:var(--surf);border:1px solid var(--border-2);border-radius:4px;overflow:hidden;margin-bottom:20px}
 .ac.bg{border-top:2px solid var(--gold)}
 .ac.bc{border-top:2px solid var(--coral)}
 .ac.bs{border-top:2px solid var(--sage)}
 .ah{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:18px;padding:22px 26px;border-bottom:1px solid var(--border-2)}
 .an{font-family:'Fraunces',serif;font-size:52px;font-style:italic;font-weight:400;color:var(--text-3);line-height:1}
+.ac.bs .an{color:var(--sage)}
+.ac.bc .an{color:var(--coral)}
 .at{font-family:'Fraunces',serif;font-size:22px;font-style:italic;font-weight:400;color:var(--text);line-height:1.2;margin-bottom:5px}
 .as{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--text-3);font-weight:300;word-break:break-all}
 .ae{font-family:'Manrope',sans-serif;font-size:8.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:5px 11px;border-radius:3px;white-space:nowrap}
@@ -67,7 +82,7 @@ body{background:radial-gradient(ellipse at 20% 0%,rgba(232,194,108,.06) 0%,trans
 .sp:nth-child(2n){border-right:none}
 .sp:nth-child(3),.sp:nth-child(4){border-bottom:none}
 .spt{font-size:8.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--text-3);margin-bottom:13px}
-.br{display:grid;grid-template-columns:72px 1fr 118px;align-items:center;gap:9px;margin-bottom:7px}
+.br{display:grid;grid-template-columns:78px 1fr 130px;align-items:center;gap:9px;margin-bottom:7px}
 .brl{font-family:'Fraunces',serif;font-size:13px;font-style:italic;color:var(--text-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .brt{background:rgba(255,255,255,.04);height:9px;border-radius:2px;overflow:hidden}
 .brf{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--gold-3),var(--gold));box-shadow:0 0 8px rgba(232,194,108,.18)}
@@ -84,38 +99,8 @@ body{background:radial-gradient(ellipse at 20% 0%,rgba(232,194,108,.06) 0%,trans
 .rt tr:last-child td{border-bottom:none}
 .cg{color:var(--sage)}
 .cn{color:var(--text-3)}
-.dc{background:var(--surf);border:1px solid var(--border-2);border-radius:4px;padding:26px 28px 20px}
-.dc-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
-.dc-lbl{font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--text-3)}
-.dc-total{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-3)}
-.dc-wrap{display:flex;gap:10px;align-items:stretch}
-.dc-yaxis{display:flex;flex-direction:column;justify-content:space-between;padding-bottom:30px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-3);flex-shrink:0;text-align:right;width:26px}
-.dc-plot{flex:1;position:relative}
-.dc-grid{position:absolute;top:0;left:0;right:0;height:160px;pointer-events:none}
-.dc-gl{position:absolute;left:0;right:0;height:1px;background:rgba(255,255,255,.04)}
-.dc-bars{display:flex;gap:5px;align-items:flex-end;height:160px;margin-bottom:0}
-.bc2{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;height:160px}
-.ba{width:100%;position:absolute;bottom:0;border-radius:2px 2px 0 0;background:linear-gradient(180deg,var(--gold) 0%,var(--gold-3) 100%)}
-.bl-dot{position:absolute;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:var(--sage-bg);border:1px solid var(--sage);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--sage);z-index:2}
-.bl-spend{position:absolute;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--gold);white-space:nowrap}
-.dc-baseline{height:1px;background:rgba(255,255,255,.08);margin-top:0}
-.dc-dates{display:flex;gap:5px;margin-top:6px}
-.bd{flex:1;font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--text-3);text-align:center}
-.dc-legend{display:flex;gap:16px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border-2)}
-.dl-item{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--text-3)}
-.dl-dot{width:8px;height:8px;border-radius:50%}
-.acard{background:var(--surf);border:1px solid var(--border-2);border-radius:4px;padding:26px 30px;margin-bottom:14px}
-.acard.res{border-top:2px solid var(--gold)}
-.acard.pla{border-top:2px solid var(--coral)}
-.act{font-family:'Fraunces',serif;font-size:18px;font-style:italic;font-weight:400;color:var(--gold);margin-bottom:13px}
-.acard.pla .act{color:var(--coral)}
-.ab{font-family:'Manrope',sans-serif;font-size:13.5px;line-height:1.78;color:var(--text-2);font-weight:400}
-.ab strong{color:var(--text);font-weight:600}
-.footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--border-2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.fl{font-size:10px;color:var(--text-3)}
-.fr{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-3)}
-.launch-badge{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-3);background:var(--neutral-bg);border:1px solid var(--border-2);border-radius:3px;padding:3px 8px;margin-top:6px}
-.launch-badge .dot{width:5px;height:5px;border-radius:50%;background:var(--coral);display:inline-block}
+
+/* DUEL */
 .duel{background:var(--surf);border:1px solid var(--border-2);border-radius:4px;overflow:hidden}
 .duel-top{display:grid;grid-template-columns:1fr 70px 1fr;border-bottom:2px solid var(--border-2)}
 .duel-side{padding:22px 26px}
@@ -127,7 +112,7 @@ body{background:radial-gradient(ellipse at 20% 0%,rgba(232,194,108,.06) 0%,trans
 .dmc{padding:14px 22px;border-bottom:1px solid var(--border-2);display:flex;flex-direction:column;justify-content:center}
 .dmc.left{border-right:1px solid var(--border-2);align-items:flex-end;text-align:right}
 .dmc.right{border-left:1px solid var(--border-2);align-items:flex-start}
-.dmc.mid{display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.015);text-align:center;border-bottom:1px solid var(--border-2)}
+.dmc.mid{display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.015);text-align:center}
 .dmn{font-family:'JetBrains Mono',monospace;font-size:26px;font-variant-numeric:tabular-nums;color:var(--text-2)}
 .dmn.wc{color:var(--sage);font-size:32px}
 .dmn.wl{color:var(--gold);font-size:32px}
@@ -140,30 +125,89 @@ body{background:radial-gradient(ellipse at 20% 0%,rgba(232,194,108,.06) 0%,trans
 .duel-sub-col{padding:20px 24px}
 .duel-sub-col:first-child{border-right:1px solid var(--border-2)}
 .duel-sub-head{font-size:8.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
-.duel-verdict{padding:18px 26px;background:rgba(127,181,138,.05);border-top:1px solid rgba(127,181,138,.18)}
-.duel-verdict-lbl{font-size:8.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-bottom:8px}
-.duel-verdict-body{font-family:'Manrope',sans-serif;font-size:13px;color:var(--text-2);line-height:1.72}
-.duel-verdict-body strong{color:var(--text);font-weight:600}
+.duel-tag{display:inline-block;font-size:8.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:3px 8px;border-radius:2px;margin-bottom:10px}
+.duel-tag.c{color:var(--sage);background:var(--sage-bg);border:1px solid rgba(127,181,138,.2)}
+.duel-tag.l{color:var(--gold);background:rgba(232,194,108,.08);border:1px solid rgba(232,194,108,.2)}
 .duel-br{display:grid;grid-template-columns:64px 1fr 100px;align-items:center;gap:8px;margin-bottom:6px}
 .duel-brl{font-family:'Fraunces',serif;font-size:12px;font-style:italic;color:var(--text-2)}
 .duel-brt{background:rgba(255,255,255,.04);height:8px;border-radius:2px;overflow:hidden}
 .duel-brf{height:100%;border-radius:2px}
 .duel-bri{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-2);text-align:right;font-variant-numeric:tabular-nums}
-.duel-tag{display:inline-block;font-size:8.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:3px 8px;border-radius:2px;margin-bottom:10px}
-.duel-tag.c{color:var(--sage);background:var(--sage-bg);border:1px solid rgba(127,181,138,.2)}
-.duel-tag.l{color:var(--gold);background:rgba(232,194,108,.08);border:1px solid rgba(232,194,108,.2)}
+.duel-verdict{padding:18px 26px;background:rgba(232,194,108,.05);border-top:1px solid rgba(232,194,108,.18)}
+.duel-verdict-lbl{font-size:8.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.duel-verdict-body{font-family:'Manrope',sans-serif;font-size:13px;color:var(--text-2);line-height:1.72}
+.duel-verdict-body strong{color:var(--text);font-weight:600}
+.duel-verdict-body em{color:var(--gold);font-style:italic}
+
+/* TOP ANÚNCIOS */
+.ads-list{display:flex;flex-direction:column;gap:1px;background:var(--border-2);border:1px solid var(--border-2);border-radius:4px;overflow:hidden}
+.ad-row{background:var(--surf);display:grid;grid-template-columns:2.2fr repeat(5,1fr);gap:14px;padding:18px 24px;align-items:center}
+.ad-row .anm{font-family:'Fraunces',serif;font-size:14px;font-style:italic;color:var(--text);line-height:1.3}
+.ad-row .am{display:flex;flex-direction:column;gap:2px}
+.ad-row .am .lbl{font-size:8.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--text-3)}
+.ad-row .am .val{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:var(--text);font-variant-numeric:tabular-nums}
+.ad-row.best{background:rgba(232,194,108,.06)}
+.ad-row.best .anm{color:var(--gold)}
+
+/* DIÁRIO */
+.diario-card{background:var(--surf);border:1px solid var(--border-2);border-radius:4px;overflow:hidden}
+.diario-card .twrap{overflow-x:auto}
+.diario-card table{width:100%;border-collapse:collapse}
+.diario-card th{font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--text-3);text-align:left;padding:14px 18px;border-bottom:1px solid var(--border);background:rgba(0,0,0,.18)}
+.diario-card th:not(:first-child){text-align:right}
+.diario-card td{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--text-2);padding:13px 18px;border-bottom:1px solid var(--border-2)}
+.diario-card td:not(:first-child){text-align:right}
+.diario-card td.date{font-family:'Fraunces',serif;font-size:14px;font-style:italic;color:var(--text)}
+.diario-card tr.ctrhi td{background:rgba(127,181,138,.08);color:var(--sage)}
+.diario-card tr.ctrhi td.date{color:var(--sage)}
+.diario-card tr.ctrlo td{background:rgba(224,122,95,.08);color:var(--coral)}
+.diario-card tr.ctrlo td.date{color:var(--coral)}
+.diario-card tr:last-child td{border-bottom:none}
+
+/* ANÁLISE */
+.acard{background:var(--surf);border:1px solid var(--border-2);border-radius:4px;padding:26px 30px;margin-bottom:14px}
+.acard.res{border-top:2px solid var(--gold)}
+.acard.pla{border-top:2px solid var(--coral)}
+.act{font-family:'Fraunces',serif;font-size:18px;font-style:italic;font-weight:400;color:var(--gold);margin-bottom:13px}
+.acard.pla .act{color:var(--coral)}
+.ab{font-family:'Manrope',sans-serif;font-size:13.5px;line-height:1.78;color:var(--text-2);font-weight:400}
+.ab strong{color:var(--text);font-weight:600}
+.ab em{color:var(--gold);font-style:italic}
+
+/* FOOTER */
+.footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--border-2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;position:relative}
+.footer::before{content:"";position:absolute;top:-1px;left:0;width:60px;height:1px;background:var(--gold)}
+.fl{font-size:10px;color:var(--text-3);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.fr{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:.05em}
+
+/* RESPONSIVE */
+@media(max-width:760px){
+.wrap{padding:24px 18px 40px}
+.hero{flex-direction:column;gap:20px}.hero-title{font-size:38px}.period-card{width:100%}
+.kpi-grid{grid-template-columns:repeat(2,1fr)}.kv{font-size:26px}.kc.leads .kv{font-size:34px}
+.ah{grid-template-columns:1fr;gap:12px}.an{font-size:42px}.at{font-size:19px}
+.ks{grid-template-columns:repeat(3,1fr)}.sv{font-size:14px}
+.sg{grid-template-columns:1fr}.sp{border-right:none}.sp:nth-child(odd){border-bottom:1px solid var(--border-2)}.sp:last-child{border-bottom:none}
+.br{grid-template-columns:60px 1fr 100px;gap:7px;font-size:11px}.brl{font-size:12px}
+.duel-top{grid-template-columns:1fr}.duel-sep{padding:8px 0;border-left:none;border-right:none;border-top:1px solid var(--border-2);border-bottom:1px solid var(--border-2)}
+.duel-metrics{grid-template-columns:1fr;border-bottom:1px solid var(--border-2)}.dmc{border-right:none!important;border-left:none!important;align-items:flex-start!important;text-align:left!important}
+.duel-sub{grid-template-columns:1fr}.duel-sub-col:first-child{border-right:none;border-bottom:1px solid var(--border-2)}
+.ad-row{grid-template-columns:1fr 1fr;gap:12px;padding:14px 16px}.ad-row .anm{grid-column:1/-1;margin-bottom:4px}
+.sh{margin:40px 0 18px}.sh-t{font-size:22px}}
+@media(max-width:460px){.kpi-grid{grid-template-columns:1fr}.ks{grid-template-columns:repeat(2,1fr)}.ad-row{grid-template-columns:1fr}}
+
+/* PRINT */
+@media print{
+body{background:var(--bg)!important;color:var(--text)!important}.noise{display:none}.wrap{max-width:100%;padding:18px}
+.hero,.ac,.kc,.duel,.diario-card,.acard,.ad-row{break-inside:avoid;page-break-inside:avoid}
+.sg,.ks,.kpi-grid,.duel-top,.duel-metrics,.duel-sub{break-inside:avoid}.ab,.duel-verdict-body{orphans:3;widows:3}a{text-decoration:none;color:inherit}}
 </style>
 </head>
 <body>
-
-<svg class="noise" xmlns="http://www.w3.org/2000/svg">
-  <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-  <rect width="100%" height="100%" filter="url(#noise)"/>
-</svg>
+<svg class="noise" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
 
 <div class="wrap">
 
-  <!-- HERO -->
   <div class="hero">
     <div>
       <div class="eyebrow"><span class="n">CA</span>LivingWell Properties</div>
@@ -171,602 +215,486 @@ body{background:radial-gradient(ellipse at 20% 0%,rgba(232,194,108,.06) 0%,trans
       <div class="hero-sub">Conta act_938859788941998 &nbsp;·&nbsp; Todas as campanhas &nbsp;·&nbsp; Período de 7 dias</div>
     </div>
     <div class="period-card">
-      <div class="period-val">15 — 21 Jun 2026</div>
-      <div class="period-vs">vs. 08 Jun — 14 Jun 2026</div>
+      <div class="period-lbl">Período</div>
+      <div class="period-val">22 — 28 Jun 2026</div>
+      <div class="period-vs">vs. 15 — 21 Jun 2026</div>
     </div>
   </div>
 
-  <!-- 01 — RESUMO DA CONTA -->
-  <div class="sh"><span class="sh-n">01</span><h2 class="sh-t">Resumo da Conta</h2><div class="sh-l"></div></div>
+  <!-- 01 RESUMO DA CONTA -->
+  <div class="sh"><span class="sh-n">01</span><h2 class="sh-t">Resumo da Conta</h2><span class="sh-l"></span></div>
 
   <div class="kpi-grid">
-    <div class="kc">
-      <div class="kl">Investimento</div>
-      <div class="kvr"><span class="kv">172,01</span><span class="ku">€</span></div>
-      <span class="kd n">+12,3%</span>
-    </div>
-    <div class="kc leads">
-      <div class="kl">Leads</div>
-      <div class="kvr"><span class="kv">51</span></div>
-      <span class="kd s">+24,4%</span>
-    </div>
-    <div class="kc">
-      <div class="kl">CPL</div>
-      <div class="kvr"><span class="kv">3,37</span><span class="ku">€</span></div>
-      <span class="kd s">−9,9%</span>
-    </div>
-    <div class="kc">
-      <div class="kl">Alcance</div>
-      <div class="kvr"><span class="kv">17.147</span></div>
-      <span class="kd s">+50,5%</span>
-    </div>
-    <div class="kc">
-      <div class="kl">Impressões</div>
-      <div class="kvr"><span class="kv">38.951</span></div>
-      <span class="kd s">+60,1%</span>
-    </div>
-    <div class="kc">
-      <div class="kl">Cliques</div>
-      <div class="kvr"><span class="kv">1.231</span></div>
-      <span class="kd s">+99,2%</span>
-    </div>
-    <div class="kc">
-      <div class="kl">CTR</div>
-      <div class="kvr"><span class="kv">3,16</span><span class="ku">%</span></div>
-      <span class="kd s">+24,4%</span>
-    </div>
-    <div class="kc">
-      <div class="kl">CPM</div>
-      <div class="kvr"><span class="kv">4,42</span><span class="ku">€</span></div>
-      <span class="kd s">−29,8%</span>
-    </div>
-    <div class="kc">
-      <div class="kl">CPC</div>
-      <div class="kvr"><span class="kv">0,14</span><span class="ku">€</span></div>
-      <span class="kd s">−44,0%</span>
-    </div>
+    <div class="kc"><div class="kl">Investimento</div><div class="kvr"><span class="kv">177,42</span><span class="ku">€</span></div><span class="kd n">↑ 3,13%</span></div>
+    <div class="kc leads"><div class="kl">Leads</div><div class="kvr"><span class="kv">39</span></div><span class="kd c">↓ 23,53%</span></div>
+    <div class="kc"><div class="kl">CPL</div><div class="kvr"><span class="kv">4,55</span><span class="ku">€</span></div><span class="kd c">↑ 35,01%</span></div>
+    <div class="kc"><div class="kl">Alcance</div><div class="kvr"><span class="kv">17.962</span></div><span class="kd s">↑ 4,75%</span></div>
+    <div class="kc"><div class="kl">Impressões</div><div class="kvr"><span class="kv">39.007</span></div><span class="kd s">↑ 0,13%</span></div>
+    <div class="kc"><div class="kl">Cliques</div><div class="kvr"><span class="kv">929</span></div><span class="kd c">↓ 24,59%</span></div>
+    <div class="kc"><div class="kl">CTR</div><div class="kvr"><span class="kv">2,38</span><span class="ku">%</span></div><span class="kd c">↓ 24,68%</span></div>
+    <div class="kc"><div class="kl">CPM</div><div class="kvr"><span class="kv">4,55</span><span class="ku">€</span></div><span class="kd c">↑ 2,94%</span></div>
+    <div class="kc"><div class="kl">CPC</div><div class="kvr"><span class="kv">0,19</span><span class="ku">€</span></div><span class="kd c">↑ 35,71%</span></div>
   </div>
 
-  <!-- 02 — DETALHE DOS IMÓVEIS -->
-  <div class="sh"><span class="sh-n">02</span><h2 class="sh-t">Detalhe dos Imóveis</h2><div class="sh-l"></div></div>
+  <!-- 02 DETALHE DOS IMÓVEIS -->
+  <div class="sh"><span class="sh-n">02</span><h2 class="sh-t">Detalhe dos Imóveis</h2><span class="sh-l"></span></div>
 
-  <!-- ADSET 01: TERRENO AROEIRA -->
+  <!-- 01 TERRENO -->
   <div class="ac bs">
     <div class="ah">
       <div class="an">01</div>
       <div>
         <div class="at">Terreno Aroeira</div>
-        <div class="as">[TERRENO AROEIRA][OPEN] [18-65+] [IG/FB] 02/04 &nbsp;·&nbsp; ID 120246477586690735</div>
+        <div class="as">[TERRENO AROEIRA] [OPEN] [18-65+] [IG/FB] 02/04 &nbsp;·&nbsp; ID 120246477586690735</div>
       </div>
       <div class="ae sv">Saudável</div>
     </div>
     <div class="ks">
-      <div class="si"><div class="sl">Invest.</div><div class="sv">€35,05</div><span class="sd n">−1,9%</span></div>
-      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--gold)">13</div><span class="sd s">+62,5%</span></div>
-      <div class="si"><div class="sl">CPL</div><div class="sv">€2,70</div><span class="sd s">−39,6%</span></div>
-      <div class="si"><div class="sl">CTR</div><div class="sv">1,29%</div><span class="sd s">+2,4%</span></div>
-      <div class="si"><div class="sl">CPC</div><div class="sv">€0,22</div><span class="sd s">−12,0%</span></div>
-      <div class="si"><div class="sl">Alcance</div><div class="sv">6.019</div><span class="sd n">N/A</span></div>
-      <div class="si"><div class="sl">Freq.</div><div class="sv">2,05</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Invest.</div><div class="sv">€35,34</div><span class="sd n">↑ 0,8%</span></div>
+      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--gold)">12</div><span class="sd c">↓ 7,7%</span></div>
+      <div class="si"><div class="sl">CPL</div><div class="sv">€2,95</div><span class="sd c">↑ 9,3%</span></div>
+      <div class="si"><div class="sl">CTR</div><div class="sv">1,13%</div><span class="sd c">↓ 12,4%</span></div>
+      <div class="si"><div class="sl">CPC</div><div class="sv">€0,23</div><span class="sd c">↑ 4,5%</span></div>
+      <div class="si"><div class="sl">Alcance</div><div class="sv">6.750</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Freq.</div><div class="sv">2,01</div><span class="sd n">N/A</span></div>
     </div>
     <div class="sg">
       <div class="sp">
         <div class="spt">Faixa Etária</div>
-        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:2.1%"></div></div><div class="bri" style="color:var(--text-3)">€0,44 · 0</div></div>
-        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf dm" style="width:7.3%"></div></div><div class="bri" style="color:var(--text-3)">€1,52 · 0</div></div>
-        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf" style="width:9.1%"></div></div><div class="bri">€1,89<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:16.5%"></div></div><div class="bri">€3,44<span class="lb">2</span></div></div>
-        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:33.3%"></div></div><div class="bri">€6,94<span class="lb">2</span></div></div>
-        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€20,82<span class="lb">8</span></div></div>
+        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:.9%"></div></div><div class="bri" style="color:var(--text-3)">€0,20 · 0</div></div>
+        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf dm" style="width:3.4%"></div></div><div class="bri" style="color:var(--text-3)">€0,77 · 0</div></div>
+        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf dm" style="width:4.9%"></div></div><div class="bri" style="color:var(--text-3)">€1,10 · 0</div></div>
+        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:13.1%"></div></div><div class="bri">€2,96<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:34.0%"></div></div><div class="bri">€7,69<span class="lb">4</span></div></div>
+        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€22,62<span class="lb">7</span></div></div>
       </div>
       <div class="sp">
         <div class="spt">Género</div>
-        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:27.9%"></div></div><div class="bri">€7,59<span class="lb">3</span></div></div>
-        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€27,25<span class="lb">10</span></div></div>
-        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:0.8%"></div></div><div class="bri" style="color:var(--text-3)">€0,21 · —</div></div>
+        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:28.7%"></div></div><div class="bri">€7,87<span class="lb">4</span></div></div>
+        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€27,38<span class="lb">8</span></div></div>
+        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:.3%"></div></div><div class="bri" style="color:var(--text-3)">€0,09 · —</div></div>
       </div>
       <div class="sp">
         <div class="spt">Top Zonas — por Investimento</div>
-        <table class="rt">
-          <thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead>
-          <tbody>
-            <tr><td>Lisboa</td><td>29</td><td>€6,72</td><td class="cg">€3,36</td></tr>
-            <tr><td>Setúbal</td><td>39</td><td>€5,44</td><td class="cg">€1,81</td></tr>
-            <tr><td>Porto</td><td>14</td><td>€3,98</td><td class="cg">€3,98</td></tr>
-            <tr><td>Faro</td><td>4</td><td>€2,38</td><td class="cg">€2,38</td></tr>
-            <tr><td>Braga</td><td>6</td><td>€1,94</td><td class="cg">€1,94</td></tr>
-          </tbody>
-        </table>
+        <table class="rt"><thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead><tbody>
+          <tr><td>Lisboa</td><td>15</td><td>€6,36</td><td class="cn">—</td></tr>
+          <tr><td>Porto</td><td>28</td><td>€5,18</td><td class="cn">—</td></tr>
+          <tr><td>Setúbal</td><td>24</td><td>€5,03</td><td class="cn">—</td></tr>
+          <tr><td>Braga</td><td>7</td><td>€2,27</td><td class="cn">—</td></tr>
+          <tr><td>Santarém</td><td>4</td><td>€2,05</td><td class="cn">—</td></tr>
+        </tbody></table>
       </div>
       <div class="sp">
         <div class="spt">Plataforma · Posicionamento</div>
-        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€25,39<span class="lb">10</span></div></div>
-        <div class="br"><div class="brl">FB Feed</div><div class="brt"><div class="brf dm" style="width:11.9%"></div></div><div class="bri" style="color:var(--text-3)">€3,03 · 0</div></div>
-        <div class="br"><div class="brl">FB Stories</div><div class="brt"><div class="brf dm" style="width:11.3%"></div></div><div class="bri" style="color:var(--text-3)">€2,86 · 0</div></div>
-        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf" style="width:5.4%"></div></div><div class="bri">€1,36<span class="lb">2</span></div></div>
-        <div class="br"><div class="brl">FB Instream</div><div class="brt"><div class="brf dm" style="width:4.8%"></div></div><div class="bri" style="color:var(--text-3)">€1,22 · 0</div></div>
-        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf" style="width:1.6%"></div></div><div class="bri">€0,40<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€31,01<span class="lb">12</span></div></div>
+        <div class="br"><div class="brl">Feed</div><div class="brt"><div class="brf dm" style="width:5.4%"></div></div><div class="bri" style="color:var(--text-3)">€1,66 · 0</div></div>
+        <div class="br"><div class="brl">FB Stories</div><div class="brt"><div class="brf dm" style="width:3.3%"></div></div><div class="bri" style="color:var(--text-3)">€1,03 · 0</div></div>
+        <div class="br"><div class="brl">FB Instream</div><div class="brt"><div class="brf dm" style="width:2.7%"></div></div><div class="bri" style="color:var(--text-3)">€0,85 · 0</div></div>
+        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf dm" style="width:1.8%"></div></div><div class="bri" style="color:var(--text-3)">€0,55 · 0</div></div>
+        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf dm" style="width:.5%"></div></div><div class="bri" style="color:var(--text-3)">€0,16 · 0</div></div>
       </div>
     </div>
   </div>
 
-  <!-- ADSET 02: ECOLIVING [C] -->
+  <!-- 02 ECOLIVING [L] -->
   <div class="ac bs">
     <div class="ah">
       <div class="an">02</div>
       <div>
-        <div class="at">Ecoliving <span style="color:var(--sage)">[C]</span></div>
-        <div class="as">[ECOLIVING][OPEN] [18-65+] [IG/FB] 05-06 [C] &nbsp;·&nbsp; ID 120250307233010735</div>
+        <div class="at">Ecoliving <span style="color:var(--gold)">[L]</span></div>
+        <div class="as">[ECOLIVING] [OPEN] [18-65+] [IG/FB] 08-06 [L] &nbsp;·&nbsp; ID 120250520442010735</div>
       </div>
       <div class="ae sv">Saudável</div>
     </div>
     <div class="ks">
-      <div class="si"><div class="sl">Invest.</div><div class="sv">€34,62</div><span class="sd n">−15,0%</span></div>
-      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--gold)">19</div><span class="sd s">+58,3%</span></div>
-      <div class="si"><div class="sl">CPL</div><div class="sv">€1,82</div><span class="sd s">−46,5%</span></div>
-      <div class="si"><div class="sl">CTR</div><div class="sv">5,03%</div><span class="sd s">+34,9%</span></div>
-      <div class="si"><div class="sl">CPC</div><div class="sv">€0,09</div><span class="sd s">−64,0%</span></div>
-      <div class="si"><div class="sl">Alcance</div><div class="sv">4.322</div><span class="sd n">N/A</span></div>
-      <div class="si"><div class="sl">Freq.</div><div class="sv">1,73</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Invest.</div><div class="sv">€34,80</div><span class="sd n">↑ 1,4%</span></div>
+      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--gold)">11</div><span class="sd s">↑ 10,0%</span></div>
+      <div class="si"><div class="sl">CPL</div><div class="sv">€3,16</div><span class="sd s">↓ 7,9%</span></div>
+      <div class="si"><div class="sl">CTR</div><div class="sv">2,86%</div><span class="sd c">↓ 34,1%</span></div>
+      <div class="si"><div class="sl">CPC</div><div class="sv">€0,13</div><span class="sd c">↑ 44,4%</span></div>
+      <div class="si"><div class="sl">Alcance</div><div class="sv">5.089</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Freq.</div><div class="sv">1,89</div><span class="sd n">N/A</span></div>
     </div>
     <div class="sg">
       <div class="sp">
         <div class="spt">Faixa Etária</div>
-        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:2.9%"></div></div><div class="bri" style="color:var(--text-3)">€0,37 · 0</div></div>
-        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf" style="width:39.1%"></div></div><div class="bri">€4,97<span class="lb">2</span></div></div>
-        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf" style="width:83.2%"></div></div><div class="bri">€10,58<span class="lb">5</span></div></div>
-        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€12,72<span class="lb">6</span></div></div>
-        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:34.4%"></div></div><div class="bri">€4,37<span class="lb">6</span></div></div>
-        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf dm" style="width:12.7%"></div></div><div class="bri" style="color:var(--text-3)">€1,61 · 0</div></div>
+        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:7.9%"></div></div><div class="bri" style="color:var(--text-3)">€0,73 · 0</div></div>
+        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf" style="width:56.1%"></div></div><div class="bri">€5,19<span class="lb">2</span></div></div>
+        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf" style="width:77.9%"></div></div><div class="bri">€7,21<span class="lb">3</span></div></div>
+        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€9,25<span class="lb">2</span></div></div>
+        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:77.6%"></div></div><div class="bri">€7,18<span class="lb">2</span></div></div>
+        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf" style="width:56.6%"></div></div><div class="bri">€5,24<span class="lb">2</span></div></div>
       </div>
       <div class="sp">
         <div class="spt">Género</div>
-        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:96.1%"></div></div><div class="bri">€16,88<span class="lb">8</span></div></div>
-        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€17,57<span class="lb">11</span></div></div>
-        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:1.0%"></div></div><div class="bri" style="color:var(--text-3)">€0,17 · —</div></div>
+        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:96.7%"></div></div><div class="bri">€16,97<span class="lb">7</span></div></div>
+        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€17,55<span class="lb">4</span></div></div>
+        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:1.6%"></div></div><div class="bri" style="color:var(--text-3)">€0,28 · —</div></div>
       </div>
       <div class="sp">
         <div class="spt">Top Zonas — por Investimento</div>
-        <table class="rt">
-          <thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead>
-          <tbody>
-            <tr><td>Lisboa</td><td>143</td><td>€20,03</td><td class="cg">€1,67</td></tr>
-            <tr><td>Évora</td><td>163</td><td>€5,57</td><td class="cg">€1,11</td></tr>
-            <tr><td>Setúbal</td><td>16</td><td>€4,61</td><td class="cn">—</td></tr>
-            <tr><td>Portalegre</td><td>31</td><td>€0,88</td><td class="cg">€0,88</td></tr>
-            <tr><td>Faro</td><td>11</td><td>€0,53</td><td class="cg">€0,53</td></tr>
-          </tbody>
-        </table>
+        <table class="rt"><thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead><tbody>
+          <tr><td>Lisboa</td><td>72</td><td>€13,84</td><td class="cn">—</td></tr>
+          <tr><td>Évora</td><td>148</td><td>€9,01</td><td class="cn">—</td></tr>
+          <tr><td>Setúbal</td><td>18</td><td>€4,13</td><td class="cn">—</td></tr>
+          <tr><td>Santarém</td><td>5</td><td>€1,22</td><td class="cn">—</td></tr>
+          <tr><td>Faro</td><td>7</td><td>€0,91</td><td class="cn">—</td></tr>
+        </tbody></table>
       </div>
       <div class="sp">
         <div class="spt">Plataforma · Posicionamento</div>
-        <div class="br"><div class="brl">IG Feed</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€19,97<span class="lb">13</span></div></div>
-        <div class="br"><div class="brl">FB Feed</div><div class="brt"><div class="brf" style="width:33.9%"></div></div><div class="bri">€6,78<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf" style="width:27.4%"></div></div><div class="bri">€5,47<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf" style="width:6.4%"></div></div><div class="bri">€1,28<span class="lb">2</span></div></div>
-        <div class="br"><div class="brl">FB Stories</div><div class="brt"><div class="brf" style="width:2.8%"></div></div><div class="bri">€0,55<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf" style="width:2.5%"></div></div><div class="bri">€0,49<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">Feed</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€18,49<span class="lb">5</span></div></div>
+        <div class="br"><div class="brl">FB R.Overlay</div><div class="brt"><div class="brf" style="width:24.3%"></div></div><div class="bri">€4,50<span class="lb">3</span></div></div>
+        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf" style="width:17.6%"></div></div><div class="bri">€3,25<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf" style="width:16.7%"></div></div><div class="bri">€3,09<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf" style="width:11.0%"></div></div><div class="bri">€2,04<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">Marketplace</div><div class="brt"><div class="brf dm" style="width:7.5%"></div></div><div class="bri" style="color:var(--text-3)">€1,38 · 0</div></div>
       </div>
     </div>
   </div>
 
-  <!-- ADSET 03: ECOLIVING [L] -->
-  <div class="ac bs">
+  <!-- 03 ECOLIVING [C] - PRECISA AÇÃO -->
+  <div class="ac bc">
     <div class="ah">
       <div class="an">03</div>
       <div>
-        <div class="at">Ecoliving <span style="color:var(--gold)">[L]</span></div>
-        <div class="as">[ECOLIVING][OPEN] [18-65+] [IG/FB] 08-06 [L] &nbsp;·&nbsp; ID 120250520442010735</div>
-      </div>
-      <div class="ae sv">Saudável</div>
-    </div>
-    <div class="ks">
-      <div class="si"><div class="sl">Invest.</div><div class="sv">€34,31</div><span class="sd n">+5,2%</span></div>
-      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--gold)">10</div><span class="sd s">+66,7%</span></div>
-      <div class="si"><div class="sl">CPL</div><div class="sv">€3,43</div><span class="sd s">−36,9%</span></div>
-      <div class="si"><div class="sl">CTR</div><div class="sv">4,34%</div><span class="sd s">+26,9%</span></div>
-      <div class="si"><div class="sl">CPC</div><div class="sv">€0,09</div><span class="sd s">−67,4%</span></div>
-      <div class="si"><div class="sl">Alcance</div><div class="sv">4.614</div><span class="sd n">N/A</span></div>
-      <div class="si"><div class="sl">Freq.</div><div class="sv">1,94</div><span class="sd n">N/A</span></div>
-    </div>
-    <div class="sg">
-      <div class="sp">
-        <div class="spt">Faixa Etária</div>
-        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:10.3%"></div></div><div class="bri" style="color:var(--text-3)">€0,94 · 0</div></div>
-        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf" style="width:69.5%"></div></div><div class="bri">€6,33<span class="lb">4</span></div></div>
-        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf dm" style="width:91.0%"></div></div><div class="bri" style="color:var(--text-3)">€8,29 · 0</div></div>
-        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€9,11<span class="lb">3</span></div></div>
-        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:68.6%"></div></div><div class="bri">€6,25<span class="lb">2</span></div></div>
-        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf" style="width:37.2%"></div></div><div class="bri">€3,39<span class="lb">1</span></div></div>
-      </div>
-      <div class="sp">
-        <div class="spt">Género</div>
-        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:90.2%"></div></div><div class="bri">€16,21<span class="lb">3</span></div></div>
-        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€17,97<span class="lb">7</span></div></div>
-        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:0.7%"></div></div><div class="bri" style="color:var(--text-3)">€0,13 · —</div></div>
-      </div>
-      <div class="sp">
-        <div class="spt">Top Zonas — por Investimento</div>
-        <table class="rt">
-          <thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead>
-          <tbody>
-            <tr><td>Évora</td><td>283</td><td>€12,90</td><td class="cg">€2,58</td></tr>
-            <tr><td>Lisboa</td><td>43</td><td>€12,41</td><td class="cg">€3,10</td></tr>
-            <tr><td>Setúbal</td><td>14</td><td>€3,24</td><td class="cn">—</td></tr>
-            <tr><td>Portalegre</td><td>20</td><td>€1,29</td><td class="cn">—</td></tr>
-            <tr><td>Porto</td><td>5</td><td>€0,66</td><td class="cg">€0,66</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="sp">
-        <div class="spt">Plataforma · Posicionamento</div>
-        <div class="br"><div class="brl">FB Feed</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€10,37<span class="lb">3</span></div></div>
-        <div class="br"><div class="brl">IG Feed</div><div class="brt"><div class="brf" style="width:98.8%"></div></div><div class="bri">€10,25<span class="lb">5</span></div></div>
-        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf dm" style="width:50.1%"></div></div><div class="bri" style="color:var(--text-3)">€5,19 · 0</div></div>
-        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf dm" style="width:31.8%"></div></div><div class="bri" style="color:var(--text-3)">€3,30 · 0</div></div>
-        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf" style="width:31.5%"></div></div><div class="bri">€3,27<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">FB Stories</div><div class="brt"><div class="brf" style="width:11.6%"></div></div><div class="bri">€1,20<span class="lb">1</span></div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ADSET 04: MORADIA V3+1 — PRECISA AÇÃO -->
-  <div class="ac bc">
-    <div class="ah">
-      <div class="an">04</div>
-      <div>
-        <div class="at">Moradia V3+1 Aroeira</div>
-        <div class="as">[MORADIA V3+1 AROEIRA][OPEN] [18-65+] [IG/FB] 13/04 &nbsp;·&nbsp; ID 120247047384350735</div>
+        <div class="at">Ecoliving <span style="color:var(--sage)">[C]</span></div>
+        <div class="as">[ECOLIVING] [OPEN] [18-65+] [IG/FB] 05-06 [C] &nbsp;·&nbsp; ID 120250307233010735</div>
       </div>
       <div class="ae ac2">Precisa Ação</div>
     </div>
     <div class="ks">
-      <div class="si"><div class="sl">Invest.</div><div class="sv">€34,12</div><span class="sd n">−2,8%</span></div>
-      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--coral)">5</div><span class="sd c">−54,5%</span></div>
-      <div class="si"><div class="sl">CPL</div><div class="sv">€6,82</div><span class="sd c">+113,8%</span></div>
-      <div class="si"><div class="sl">CTR</div><div class="sv">3,79%</div><span class="sd n">+0,5%</span></div>
-      <div class="si"><div class="sl">CPC</div><div class="sv">€0,17</div><span class="sd s">−26,1%</span></div>
-      <div class="si"><div class="sl">Alcance</div><div class="sv">2.974</div><span class="sd n">N/A</span></div>
-      <div class="si"><div class="sl">Freq.</div><div class="sv">1,77</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Invest.</div><div class="sv">€36,69</div><span class="sd n">↑ 6,0%</span></div>
+      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--coral)">6</div><span class="sd c">↓ 68,4%</span></div>
+      <div class="si"><div class="sl">CPL</div><div class="sv">€6,12</div><span class="sd c">↑ 236%</span></div>
+      <div class="si"><div class="sl">CTR</div><div class="sv">3,61%</div><span class="sd c">↓ 28,5%</span></div>
+      <div class="si"><div class="sl">CPC</div><div class="sv">€0,14</div><span class="sd c">↑ 55,6%</span></div>
+      <div class="si"><div class="sl">Alcance</div><div class="sv">4.535</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Freq.</div><div class="sv">1,63</div><span class="sd n">N/A</span></div>
     </div>
     <div class="sg">
       <div class="sp">
         <div class="spt">Faixa Etária</div>
-        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:5.7%"></div></div><div class="bri" style="color:var(--text-3)">€0,77 · 0</div></div>
-        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf" style="width:28.7%"></div></div><div class="bri">€3,86<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf" style="width:66.7%"></div></div><div class="bri">€8,96<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€13,43<span class="lb">2</span></div></div>
-        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:36.7%"></div></div><div class="bri">€4,93<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf dm" style="width:16.2%"></div></div><div class="bri" style="color:var(--text-3)">€2,17 · 0</div></div>
+        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:2.6%"></div></div><div class="bri" style="color:var(--text-3)">€0,34 · 0</div></div>
+        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf dm" style="width:26.7%"></div></div><div class="bri" style="color:var(--text-3)">€3,56 · 0</div></div>
+        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf dm" style="width:56.5%"></div></div><div class="bri" style="color:var(--text-3)">€7,52 · 0</div></div>
+        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€13,31<span class="lb">5</span></div></div>
+        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:55.7%"></div></div><div class="bri">€7,41<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf dm" style="width:34.2%"></div></div><div class="bri" style="color:var(--text-3)">€4,55 · 0</div></div>
       </div>
       <div class="sp">
         <div class="spt">Género</div>
-        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:54.8%"></div></div><div class="bri">€12,05<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€21,99<span class="lb">4</span></div></div>
-        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:0.4%"></div></div><div class="bri" style="color:var(--text-3)">€0,08 · —</div></div>
+        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm dm" style="width:100%;opacity:.5"></div></div><div class="bri" style="color:var(--coral)">€18,25 · 0</div></div>
+        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:99.6%"></div></div><div class="bri">€18,18<span class="lb">6</span></div></div>
+        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:1.4%"></div></div><div class="bri" style="color:var(--text-3)">€0,26 · —</div></div>
       </div>
       <div class="sp">
         <div class="spt">Top Zonas — por Investimento</div>
-        <table class="rt">
-          <thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead>
-          <tbody>
-            <tr><td>Lisboa</td><td>88</td><td>€19,93</td><td style="color:var(--coral);text-align:right">€6,64</td></tr>
-            <tr><td>Setúbal</td><td>96</td><td>€11,15</td><td style="color:var(--coral);text-align:right">€5,58</td></tr>
-            <tr><td>Porto</td><td>3</td><td>€0,69</td><td class="cn">—</td></tr>
-            <tr><td>Aveiro</td><td>2</td><td>€0,22</td><td class="cn">—</td></tr>
-            <tr><td>Leiria</td><td>2</td><td>€0,22</td><td class="cn">—</td></tr>
-          </tbody>
-        </table>
+        <table class="rt"><thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead><tbody>
+          <tr><td>Lisboa</td><td>120</td><td>€22,24</td><td style="color:var(--coral);text-align:right">€11,12</td></tr>
+          <tr><td>Évora</td><td>85</td><td>€4,72</td><td class="cn">—</td></tr>
+          <tr><td>Setúbal</td><td>28</td><td>€4,23</td><td class="cn">—</td></tr>
+          <tr><td>Portalegre</td><td>10</td><td>€0,88</td><td class="cn">—</td></tr>
+          <tr><td>Santarém</td><td>10</td><td>€0,79</td><td class="cn">—</td></tr>
+        </tbody></table>
       </div>
       <div class="sp">
         <div class="spt">Plataforma · Posicionamento</div>
-        <div class="br"><div class="brl">IG Feed</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€20,84<span class="lb">5</span></div></div>
-        <div class="br"><div class="brl">FB Feed</div><div class="brt"><div class="brf dm" style="width:22.6%"></div></div><div class="bri" style="color:var(--text-3)">€4,70 · 0</div></div>
-        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf dm" style="width:14.5%"></div></div><div class="bri" style="color:var(--text-3)">€3,03 · 0</div></div>
-        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf dm" style="width:14.0%"></div></div><div class="bri" style="color:var(--text-3)">€2,91 · 0</div></div>
-        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf dm" style="width:8.0%"></div></div><div class="bri" style="color:var(--text-3)">€1,67 · 0</div></div>
-        <div class="br"><div class="brl">FB Stories</div><div class="brt"><div class="brf dm" style="width:3.7%"></div></div><div class="bri" style="color:var(--text-3)">€0,77 · 0</div></div>
+        <div class="br"><div class="brl">Feed</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€23,62<span class="lb">4</span></div></div>
+        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf" style="width:29.8%"></div></div><div class="bri">€7,04<span class="lb">2</span></div></div>
+        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf dm" style="width:11.7%"></div></div><div class="bri" style="color:var(--text-3)">€2,76 · 0</div></div>
+        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf dm" style="width:9.3%"></div></div><div class="bri" style="color:var(--text-3)">€2,19 · 0</div></div>
+        <div class="br"><div class="brl">FB Stories</div><div class="brt"><div class="brf dm" style="width:3.8%"></div></div><div class="bri" style="color:var(--text-3)">€0,89 · 0</div></div>
+        <div class="br"><div class="brl">FB Instream</div><div class="brt"><div class="brf dm" style="width:.7%"></div></div><div class="bri" style="color:var(--text-3)">€0,17 · 0</div></div>
       </div>
     </div>
   </div>
 
-  <!-- ADSET 05: MORADIA V4 — PRECISA AÇÃO -->
+  <!-- 04 MORADIA V4 -->
+  <div class="ac bs">
+    <div class="ah">
+      <div class="an">04</div>
+      <div>
+        <div class="at">Moradia V4 Aroeira</div>
+        <div class="as">[MORADIA V4 AROEIRA] [OPEN] [18-65+] [IG/FB] 13-06 &nbsp;·&nbsp; ID 120250832516860735</div>
+      </div>
+      <div class="ae sv">Saudável</div>
+    </div>
+    <div class="ks">
+      <div class="si"><div class="sl">Invest.</div><div class="sv">€35,30</div><span class="sd n">↑ 4,1%</span></div>
+      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--gold)">5</div><span class="sd s">↑ 25,0%</span></div>
+      <div class="si"><div class="sl">CPL</div><div class="sv">€7,06</div><span class="sd s">↓ 16,7%</span></div>
+      <div class="si"><div class="sl">CTR</div><div class="sv">2,53%</div><span class="sd s">↑ 15,5%</span></div>
+      <div class="si"><div class="sl">CPC</div><div class="sv">€0,32</div><span class="sd c">↑ 3,2%</span></div>
+      <div class="si"><div class="sl">Alcance</div><div class="sv">2.335</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Freq.</div><div class="sv">1,84</div><span class="sd n">N/A</span></div>
+    </div>
+    <div class="sg">
+      <div class="sp">
+        <div class="spt">Faixa Etária</div>
+        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:6.3%"></div></div><div class="bri" style="color:var(--text-3)">€0,90 · 0</div></div>
+        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf dm" style="width:21.2%"></div></div><div class="bri" style="color:var(--text-3)">€3,03 · 0</div></div>
+        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf" style="width:64.3%"></div></div><div class="bri">€9,19<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€14,29<span class="lb">3</span></div></div>
+        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf dm" style="width:34.8%"></div></div><div class="bri" style="color:var(--text-3)">€4,97 · 0</div></div>
+        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf" style="width:20.4%"></div></div><div class="bri">€2,92<span class="lb">1</span></div></div>
+      </div>
+      <div class="sp">
+        <div class="spt">Género</div>
+        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:57.1%"></div></div><div class="bri">€12,75<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€22,34<span class="lb">4</span></div></div>
+        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:.9%"></div></div><div class="bri" style="color:var(--text-3)">€0,21 · —</div></div>
+      </div>
+      <div class="sp">
+        <div class="spt">Top Zonas — por Investimento</div>
+        <table class="rt"><thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead><tbody>
+          <tr><td>Lisboa</td><td>39</td><td>€17,13</td><td class="cn">—</td></tr>
+          <tr><td>Setúbal</td><td>50</td><td>€11,61</td><td class="cn">—</td></tr>
+          <tr><td>Porto</td><td>1</td><td>€1,37</td><td class="cn">—</td></tr>
+          <tr><td>Leiria</td><td>5</td><td>€0,88</td><td class="cn">—</td></tr>
+          <tr><td>Faro</td><td>1</td><td>€0,87</td><td class="cn">—</td></tr>
+        </tbody></table>
+      </div>
+      <div class="sp">
+        <div class="spt">Plataforma · Posicionamento</div>
+        <div class="br"><div class="brl">Feed</div><div class="brt"><div class="brf dm" style="width:100%"></div></div><div class="bri" style="color:var(--text-3)">€19,47 · 0</div></div>
+        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf" style="width:32.3%"></div></div><div class="bri">€6,29<span class="lb">3</span></div></div>
+        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf dm" style="width:20.5%"></div></div><div class="bri" style="color:var(--text-3)">€3,99 · 0</div></div>
+        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf" style="width:11.7%"></div></div><div class="bri">€2,28<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">FB Stories</div><div class="brt"><div class="brf dm" style="width:11.5%"></div></div><div class="bri" style="color:var(--text-3)">€2,23 · 0</div></div>
+        <div class="br"><div class="brl">FB Instream</div><div class="brt"><div class="brf" style="width:5.0%"></div></div><div class="bri">€0,97<span class="lb">1</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 MORADIA V3+1 -->
   <div class="ac bc">
     <div class="ah">
       <div class="an">05</div>
       <div>
-        <div class="at">Moradia V4 Aroeira</div>
-        <div class="as">[MORADIA V4 AROEIRA][OPEN] [18-65+] [IG/FB] 13-06 &nbsp;·&nbsp; ID 120250832516860735</div>
-        <div class="launch-badge"><span class="dot"></span>1.ª semana completa &nbsp;·&nbsp; lançado 13 Jun 2026</div>
+        <div class="at">Moradia V3+1 Aroeira</div>
+        <div class="as">[MORADIA V3+1 AROEIRA] [OPEN] [18-65+] [IG/FB] 13/04 &nbsp;·&nbsp; ID 120247047384350735</div>
       </div>
       <div class="ae ac2">Precisa Ação</div>
     </div>
     <div class="ks">
-      <div class="si"><div class="sl">Invest.</div><div class="sv">€33,91</div><span class="sd n">+276%</span></div>
-      <div class="si"><div class="sl">Leads</div><div class="sv" style="color:var(--coral)">4</div><span class="sd n">±0</span></div>
-      <div class="si"><div class="sl">CPL</div><div class="sv">€8,48</div><span class="sd c">+275%</span></div>
-      <div class="si"><div class="sl">CTR</div><div class="sv">2,19%</div><span class="sd c">−40,2%</span></div>
-      <div class="si"><div class="sl">CPC</div><div class="sv">€0,31</div><span class="sd c">+40,9%</span></div>
-      <div class="si"><div class="sl">Alcance</div><div class="sv">2.362</div><span class="sd n">N/A</span></div>
-      <div class="si"><div class="sl">Freq.</div><div class="sv">2,09</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Invest.</div><div class="sv">€35,29</div><span class="sd n">↑ 3,4%</span></div>
+      <div class="si"><div class="sl">Leads</div><div class="sv">5</div><span class="sd n">±0</span></div>
+      <div class="si"><div class="sl">CPL</div><div class="sv">€7,06</div><span class="sd c">↑ 3,5%</span></div>
+      <div class="si"><div class="sl">CTR</div><div class="sv">3,03%</div><span class="sd c">↓ 20,1%</span></div>
+      <div class="si"><div class="sl">CPC</div><div class="sv">€0,28</div><span class="sd c">↑ 64,7%</span></div>
+      <div class="si"><div class="sl">Alcance</div><div class="sv">2.396</div><span class="sd n">N/A</span></div>
+      <div class="si"><div class="sl">Freq.</div><div class="sv">1,72</div><span class="sd n">N/A</span></div>
     </div>
     <div class="sg">
       <div class="sp">
         <div class="spt">Faixa Etária</div>
-        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf dm" style="width:11.4%"></div></div><div class="bri" style="color:var(--text-3)">€1,47 · 0</div></div>
-        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf" style="width:33.7%"></div></div><div class="bri">€4,34<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf" style="width:74.3%"></div></div><div class="bri">€9,55<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf dm" style="width:100%"></div></div><div class="bri" style="color:var(--text-3)">€12,86 · 0</div></div>
-        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:28.2%"></div></div><div class="bri">€3,62<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf" style="width:16.1%"></div></div><div class="bri">€2,07<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">18–24</div><div class="brt"><div class="brf" style="width:17.7%"></div></div><div class="bri">€2,09<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">25–34</div><div class="brt"><div class="brf" style="width:39.6%"></div></div><div class="bri">€4,68<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">35–44</div><div class="brt"><div class="brf" style="width:63.1%"></div></div><div class="bri">€7,46<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">45–54</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€11,83<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">55–64</div><div class="brt"><div class="brf" style="width:42.2%"></div></div><div class="bri">€4,99<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">65+</div><div class="brt"><div class="brf dm" style="width:35.8%"></div></div><div class="bri" style="color:var(--text-3)">€4,24 · 0</div></div>
       </div>
       <div class="sp">
         <div class="spt">Género</div>
-        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:44.7%"></div></div><div class="bri">€10,44<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€23,36<span class="lb">3</span></div></div>
-        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:0.5%"></div></div><div class="bri" style="color:var(--text-3)">€0,11 · —</div></div>
+        <div class="br"><div class="brl">Feminino</div><div class="brt"><div class="brf fm" style="width:76.3%"></div></div><div class="bri">€15,13<span class="lb">2</span></div></div>
+        <div class="br"><div class="brl">Masculino</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€19,83<span class="lb">3</span></div></div>
+        <div class="br"><div class="brl">N/I</div><div class="brt"><div class="brf dm" style="width:1.7%"></div></div><div class="bri" style="color:var(--text-3)">€0,33 · —</div></div>
       </div>
       <div class="sp">
         <div class="spt">Top Zonas — por Investimento</div>
-        <table class="rt">
-          <thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead>
-          <tbody>
-            <tr><td>Lisboa</td><td>36</td><td>€17,81</td><td style="color:var(--coral);text-align:right">€17,81</td></tr>
-            <tr><td>Setúbal</td><td>61</td><td>€11,66</td><td class="cg">€3,89</td></tr>
-            <tr><td>Porto</td><td>1</td><td>€0,88</td><td class="cn">—</td></tr>
-            <tr><td>Leiria</td><td>5</td><td>€0,58</td><td class="cn">—</td></tr>
-            <tr><td>Faro</td><td>0</td><td>€0,56</td><td class="cn">—</td></tr>
-          </tbody>
-        </table>
+        <table class="rt"><thead><tr><th>Distrito</th><th>Cliques</th><th>Invest.</th><th>CPL</th></tr></thead><tbody>
+          <tr><td>Lisboa</td><td>45</td><td>€15,18</td><td class="cn">—</td></tr>
+          <tr><td>Setúbal</td><td>59</td><td>€13,83</td><td class="cn">—</td></tr>
+          <tr><td>Porto</td><td>3</td><td>€1,63</td><td class="cn">—</td></tr>
+          <tr><td>Coimbra</td><td>4</td><td>€0,59</td><td class="cn">—</td></tr>
+          <tr><td>Faro</td><td>1</td><td>€0,52</td><td class="cn">—</td></tr>
+        </tbody></table>
       </div>
       <div class="sp">
         <div class="spt">Plataforma · Posicionamento</div>
-        <div class="br"><div class="brl">IG Feed</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€12,85<span class="lb">2</span></div></div>
-        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf dm" style="width:67.7%"></div></div><div class="bri" style="color:var(--text-3)">€8,70 · 0</div></div>
-        <div class="br"><div class="brl">FB Feed</div><div class="brt"><div class="brf dm" style="width:38.8%"></div></div><div class="bri" style="color:var(--text-3)">€4,98 · 0</div></div>
-        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf dm" style="width:34.6%"></div></div><div class="bri" style="color:var(--text-3)">€4,45 · 0</div></div>
-        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf" style="width:11.2%"></div></div><div class="bri">€1,44<span class="lb">1</span></div></div>
-        <div class="br"><div class="brl">FB Stories</div><div class="brt"><div class="brf dm" style="width:8.7%"></div></div><div class="bri" style="color:var(--text-3)">€1,12 · 0</div></div>
+        <div class="br"><div class="brl">Feed</div><div class="brt"><div class="brf" style="width:100%"></div></div><div class="bri">€13,85<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">IG Stories</div><div class="brt"><div class="brf" style="width:75.4%"></div></div><div class="bri">€10,44<span class="lb">2</span></div></div>
+        <div class="br"><div class="brl">IG Reels</div><div class="brt"><div class="brf" style="width:44.8%"></div></div><div class="bri">€6,20<span class="lb">1</span></div></div>
+        <div class="br"><div class="brl">FB Reels</div><div class="brt"><div class="brf dm" style="width:14.1%"></div></div><div class="bri" style="color:var(--text-3)">€1,95 · 0</div></div>
+        <div class="br"><div class="brl">FB Instream</div><div class="brt"><div class="brf dm" style="width:9.5%"></div></div><div class="bri" style="color:var(--text-3)">€1,31 · 0</div></div>
+        <div class="br"><div class="brl">Marketplace</div><div class="brt"><div class="brf" style="width:2.0%"></div></div><div class="bri">€0,28<span class="lb">1</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- 03 — COMPARATIVO ECOLIVING [C] vs [L] -->
-  <div class="sh"><span class="sh-n">03</span><h2 class="sh-t">Comparativo Ecoliving <span style="color:var(--sage)">[C]</span> vs <span style="color:var(--gold)">[L]</span></h2><div class="sh-l"></div></div>
+  <!-- 03 COMPARATIVO ECOLIVING -->
+  <div class="sh"><span class="sh-n">03</span><h2 class="sh-t">Comparativo Ecoliving <span style="color:var(--sage)">[C]</span> vs <span style="color:var(--gold)">[L]</span></h2><span class="sh-l"></span></div>
 
   <div class="duel">
     <div class="duel-top">
       <div class="duel-side">
         <div class="duel-side-tag" style="color:var(--sage)">[C] · Variante Conteúdo</div>
-        <div class="duel-side-name">Ecoliving <em style="color:var(--sage)">[C]</em></div>
+        <div class="duel-side-name">Ecoliving <em style="color:var(--sage);font-style:italic">[C]</em></div>
         <div class="duel-side-id">ID 120250307233010735 &nbsp;·&nbsp; ativo desde 05 Jun 2026</div>
       </div>
       <div class="duel-sep">vs</div>
       <div class="duel-side">
         <div class="duel-side-tag" style="color:var(--gold)">[L] · Variante Landing</div>
-        <div class="duel-side-name">Ecoliving <em style="color:var(--gold)">[L]</em></div>
+        <div class="duel-side-name">Ecoliving <em style="color:var(--gold);font-style:italic">[L]</em></div>
         <div class="duel-side-id">ID 120250520442010735 &nbsp;·&nbsp; ativo desde 08 Jun 2026</div>
       </div>
     </div>
 
     <div class="duel-metrics">
-      <div class="dmc left"><span class="dmn wc">19</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sage);margin-top:2px">leads</span></div>
-      <div class="dmc mid"><div class="dml">Leads</div><div class="dmw wc">▲ [C] vence</div></div>
-      <div class="dmc right"><span class="dmn">10</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-3);margin-top:2px">leads</span></div>
+      <div class="dmc left"><span class="dmn">6</span></div>
+      <div class="dmc mid"><div class="dml">Leads</div><div class="dmw wl">▲ [L] vence</div></div>
+      <div class="dmc right"><span class="dmn wl">11</span></div>
 
-      <div class="dmc left"><span class="dmn wc">€1,82</span></div>
-      <div class="dmc mid"><div class="dml">CPL</div><div class="dmw wc">▲ [C] vence</div></div>
-      <div class="dmc right"><span class="dmn">€3,43</span></div>
+      <div class="dmc left"><span class="dmn">€6,12</span></div>
+      <div class="dmc mid"><div class="dml">CPL</div><div class="dmw wl">▲ [L] vence</div></div>
+      <div class="dmc right"><span class="dmn wl">€3,16</span></div>
 
-      <div class="dmc left"><span class="dmn wc">5,03%</span></div>
+      <div class="dmc left"><span class="dmn wc">3,61%</span></div>
       <div class="dmc mid"><div class="dml">CTR</div><div class="dmw wc">▲ [C] vence</div></div>
-      <div class="dmc right"><span class="dmn">4,34%</span></div>
+      <div class="dmc right"><span class="dmn">2,86%</span></div>
 
-      <div class="dmc left"><span class="dmn" style="color:var(--text-2)">€0,09</span></div>
-      <div class="dmc mid"><div class="dml">CPC</div><div class="dmw nt">empate</div></div>
-      <div class="dmc right"><span class="dmn" style="color:var(--text-2)">€0,09</span></div>
+      <div class="dmc left"><span class="dmn">€0,14</span></div>
+      <div class="dmc mid"><div class="dml">CPC</div><div class="dmw wl">▲ [L] vence</div></div>
+      <div class="dmc right"><span class="dmn wl">€0,13</span></div>
 
-      <div class="dmc left"><span class="dmn">€4,64</span></div>
+      <div class="dmc left"><span class="dmn">€4,96</span></div>
       <div class="dmc mid"><div class="dml">CPM</div><div class="dmw wl">▲ [L] vence</div></div>
-      <div class="dmc right"><span class="dmn wl">€3,84</span></div>
+      <div class="dmc right"><span class="dmn wl">€3,62</span></div>
 
-      <div class="dmc left"><span class="dmn wc">4.322</span></div>
+      <div class="dmc left"><span class="dmn">4.535</span></div>
       <div class="dmc mid"><div class="dml">Alcance</div><div class="dmw wl">▲ [L] vence</div></div>
-      <div class="dmc right"><span class="dmn wl">4.614</span></div>
+      <div class="dmc right"><span class="dmn wl">5.089</span></div>
 
-      <div class="dmc left" style="border-bottom:none"><span class="dmn" style="color:var(--text-2)">€34,62</span></div>
+      <div class="dmc left" style="border-bottom:none"><span class="dmn">€36,69</span></div>
       <div class="dmc mid" style="border-bottom:none"><div class="dml">Invest.</div><div class="dmw nt">neutro</div></div>
-      <div class="dmc right" style="border-bottom:none"><span class="dmn" style="color:var(--text-2)">€34,31</span></div>
+      <div class="dmc right" style="border-bottom:none"><span class="dmn">€34,80</span></div>
     </div>
 
     <div class="duel-sub">
       <div class="duel-sub-col">
         <div class="duel-sub-head">Género</div>
         <div class="duel-tag c">[C]</div>
-        <div class="duel-br">
-          <div class="duel-brl">Feminino</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:96.1%;background:linear-gradient(90deg,#94527A,#D67BAA)"></div></div>
-          <div class="duel-bri">€16,88<span class="lb">8</span></div>
-        </div>
-        <div class="duel-br">
-          <div class="duel-brl">Masculino</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:100%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div>
-          <div class="duel-bri">€17,57<span class="lb">11</span></div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sage);margin:6px 0 14px">CPL F €2,11 · CPL M €1,60 · ambos excelentes</div>
+        <div class="duel-br"><div class="duel-brl">Feminino</div><div class="duel-brt"><div class="duel-brf" style="width:100%;background:linear-gradient(90deg,#94527A,#D67BAA);opacity:.5"></div></div><div class="duel-bri" style="color:var(--coral)">€18,25 · 0</div></div>
+        <div class="duel-br"><div class="duel-brl">Masculino</div><div class="duel-brt"><div class="duel-brf" style="width:99.6%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div><div class="duel-bri">€18,18<span class="lb">6</span></div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--coral);margin:6px 0 14px">F colapsou (0 leads em €18) · todos os leads vêm de M</div>
 
         <div class="duel-tag l">[L]</div>
-        <div class="duel-br">
-          <div class="duel-brl">Feminino</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:90.2%;background:linear-gradient(90deg,#94527A,#D67BAA)"></div></div>
-          <div class="duel-bri">€16,21<span class="lb">3</span></div>
-        </div>
-        <div class="duel-br">
-          <div class="duel-brl">Masculino</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:100%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div>
-          <div class="duel-bri">€17,97<span class="lb">7</span></div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-3);margin-top:6px">CPL F €5,40 · CPL M €2,57 · perfil masculino</div>
+        <div class="duel-br"><div class="duel-brl">Feminino</div><div class="duel-brt"><div class="duel-brf" style="width:96.7%;background:linear-gradient(90deg,#94527A,#D67BAA)"></div></div><div class="duel-bri">€16,97<span class="lb">7</span></div></div>
+        <div class="duel-br"><div class="duel-brl">Masculino</div><div class="duel-brt"><div class="duel-brf" style="width:100%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div><div class="duel-bri">€17,55<span class="lb">4</span></div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sage);margin-top:6px">CPL F €2,42 · CPL M €4,39 · F é líder</div>
       </div>
 
       <div class="duel-sub-col">
         <div class="duel-sub-head">Plataforma</div>
         <div class="duel-tag c">[C]</div>
-        <div class="duel-br">
-          <div class="duel-brl">IG Feed</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:100%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div>
-          <div class="duel-bri">€19,97<span class="lb">13</span></div>
-        </div>
-        <div class="duel-br">
-          <div class="duel-brl">FB Feed</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:33.9%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div>
-          <div class="duel-bri">€6,78<span class="lb">1</span></div>
-        </div>
-        <div class="duel-br">
-          <div class="duel-brl">IG Stories</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:27.4%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div>
-          <div class="duel-bri">€5,47<span class="lb">1</span></div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sage);margin:6px 0 14px">IG Feed dominante · 13 de 19 leads · CPL €1,54</div>
+        <div class="duel-br"><div class="duel-brl">Feed</div><div class="duel-brt"><div class="duel-brf" style="width:100%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div><div class="duel-bri">€23,62<span class="lb">4</span></div></div>
+        <div class="duel-br"><div class="duel-brl">IG Stories</div><div class="duel-brt"><div class="duel-brf" style="width:29.8%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div><div class="duel-bri">€7,04<span class="lb">2</span></div></div>
+        <div class="duel-br"><div class="duel-brl">IG Reels</div><div class="duel-brt"><div class="duel-brf" style="width:11.7%;background:linear-gradient(90deg,rgba(142,115,64,.28),rgba(232,194,108,.18))"></div></div><div class="duel-bri" style="color:var(--text-3)">€2,76 · 0</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-3);margin:6px 0 14px">Feed dominante mas eficiência caiu — CPL €5,91</div>
 
         <div class="duel-tag l">[L]</div>
-        <div class="duel-br">
-          <div class="duel-brl">FB Feed</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:100%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div>
-          <div class="duel-bri">€10,37<span class="lb">3</span></div>
-        </div>
-        <div class="duel-br">
-          <div class="duel-brl">IG Feed</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:98.8%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div>
-          <div class="duel-bri">€10,25<span class="lb">5</span></div>
-        </div>
-        <div class="duel-br">
-          <div class="duel-brl">IG Reels</div>
-          <div class="duel-brt"><div class="duel-brf" style="width:31.5%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div>
-          <div class="duel-bri">€3,27<span class="lb">1</span></div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-3);margin-top:6px">split FB/IG Feed · sem posicionamento dominante</div>
+        <div class="duel-br"><div class="duel-brl">Feed</div><div class="duel-brt"><div class="duel-brf" style="width:100%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div><div class="duel-bri">€18,49<span class="lb">5</span></div></div>
+        <div class="duel-br"><div class="duel-brl">FB R.Ovl</div><div class="duel-brt"><div class="duel-brf" style="width:24.3%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div><div class="duel-bri">€4,50<span class="lb">3</span></div></div>
+        <div class="duel-br"><div class="duel-brl">IG Stories</div><div class="duel-brt"><div class="duel-brf" style="width:17.6%;background:linear-gradient(90deg,var(--gold-3),var(--gold))"></div></div><div class="duel-bri">€3,25<span class="lb">1</span></div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sage);margin-top:6px">Distribuição saudável · 5 placements com leads</div>
       </div>
     </div>
 
     <div class="duel-verdict">
-      <div class="duel-verdict-lbl">Veredicto — Semana 15–21 Jun</div>
+      <div class="duel-verdict-lbl">Veredicto — Semana 22-28 Jun</div>
       <div class="duel-verdict-body">
-        A variante <strong>[C]</strong> consolidou a sua liderança com <strong>19 leads a CPL €1,82</strong> — o melhor resultado de qualquer adset da conta em qualquer semana. A variante [L], por sua vez, registou a sua melhor semana: 10 leads a CPL €3,43 (−37% face à semana anterior). Ambas melhoraram, mas o gap na conversão mantém-se: [C] entrega quase o dobro dos leads com CPL 1,9× inferior. O <strong>Instagram Feed da [C]</strong> é o posicionamento mais eficiente da conta — 13 dos 19 leads a CPL €1,54. Já a [L] apresenta um padrão inédito: Évora superou Lisboa em cliques (283 vs 43) e Alcance, sugerindo uma audiência diferente a responder ao criativo. A [L] vence agora em CPM (€3,84 vs €4,64) e Alcance (4.614 vs 4.322), o que indica melhor eficiência na distribuição de impressões. <strong>Recomendação:</strong> manter o orçamento atual da [C] e analisar o criativo da [L] que está a atrair Évora — pode ser replicado na [C] como teste de expansão geográfica.
+        Inversão total face à semana passada. A variante <strong>[L]</strong> assumiu agora a liderança, vencendo em <em>cinco das sete métricas</em> (leads, CPL, CPC, CPM e alcance). A vantagem do [C] ficou apenas no CTR, e mesmo essa caiu de 5,05% para 3,61%. O motivo é claro: o público <strong>feminino do [C]</strong> deixou de converter — gastou €18,25 e gerou <em>zero leads</em>, quando na semana passada era um dos principais geradores. No [L], pelo contrário, o feminino é agora o líder com 7 leads e CPL de €2,42. <strong>Ação recomendada:</strong> renovar os criativos do [C] dirigidos ao público feminino (testar outros ângulos visuais e copy), e em paralelo escalar o orçamento do [L] em 30-40% para a próxima semana — está claramente em curva ascendente.
       </div>
     </div>
   </div>
 
-  <!-- 04 — EVOLUÇÃO DIÁRIA -->
-  <div class="sh"><span class="sh-n">04</span><h2 class="sh-t">Evolução Diária</h2><div class="sh-l"></div></div>
+  <!-- 04 TOP ANÚNCIOS -->
+  <div class="sh"><span class="sh-n">04</span><h2 class="sh-t">Top Anúncios da Conta</h2><span class="sh-l"></span></div>
 
-  <div class="dc">
-    <div class="dc-head">
-      <div class="dc-lbl">Investimento diário (€) &nbsp;·&nbsp; 15–21 Jun 2026</div>
-      <div class="dc-total">Total: €172,01 &nbsp;·&nbsp; 51 leads</div>
+  <div class="ads-list">
+    <div class="ad-row best">
+      <div class="anm">AD13 — Terreno Aroeira</div>
+      <div class="am"><span class="lbl">Invest.</span><span class="val">€34,12</span></div>
+      <div class="am"><span class="lbl">Leads</span><span class="val">12</span></div>
+      <div class="am"><span class="lbl">CPL</span><span class="val">€2,84</span></div>
+      <div class="am"><span class="lbl">CTR</span><span class="val">1,12%</span></div>
+      <div class="am"><span class="lbl">CPC</span><span class="val">€0,23</span></div>
     </div>
-    <div class="dc-wrap">
-      <div class="dc-yaxis">
-        <span>€30</span>
-        <span>€15</span>
-        <span>€0</span>
-      </div>
-      <div class="dc-plot">
-        <div class="dc-grid">
-          <div class="dc-gl" style="top:0"></div>
-          <div class="dc-gl" style="top:50%"></div>
-        </div>
-        <div class="dc-bars" style="position:relative">
-          <!-- Jun 15: €29,94 · 6L · 100% — pico de spend -->
-          <div class="bc2">
-            <div class="ba" style="height:100%">
-              <div class="bl-spend" style="bottom:calc(100% + 20px)">€29,94</div>
-              <div class="bl-dot" style="bottom:calc(100% + 3px)">6</div>
-            </div>
-          </div>
-          <!-- Jun 16: €26,23 · 11L · 87.6% — pico de leads -->
-          <div class="bc2">
-            <div class="ba" style="height:87.6%;background:linear-gradient(180deg,var(--sage) 0%,var(--gold-3) 100%)">
-              <div class="bl-spend" style="bottom:calc(100% + 20px)">€26,23</div>
-              <div class="bl-dot" style="bottom:calc(100% + 3px);background:var(--sage-bg);border-color:var(--sage);width:20px;height:20px;font-size:8px">11</div>
-            </div>
-          </div>
-          <!-- Jun 17: €23,87 · 7L · 79.7% -->
-          <div class="bc2">
-            <div class="ba" style="height:79.7%">
-              <div class="bl-spend" style="bottom:calc(100% + 20px)">€23,87</div>
-              <div class="bl-dot" style="bottom:calc(100% + 3px)">7</div>
-            </div>
-          </div>
-          <!-- Jun 18: €21,72 · 11L · 72.5% -->
-          <div class="bc2">
-            <div class="ba" style="height:72.5%;background:linear-gradient(180deg,var(--sage) 0%,var(--gold-3) 100%)">
-              <div class="bl-spend" style="bottom:calc(100% + 20px)">€21,72</div>
-              <div class="bl-dot" style="bottom:calc(100% + 3px);background:var(--sage-bg);border-color:var(--sage);width:20px;height:20px;font-size:8px">11</div>
-            </div>
-          </div>
-          <!-- Jun 19: €20,79 · 3L · 69.5% -->
-          <div class="bc2">
-            <div class="ba" style="height:69.5%">
-              <div class="bl-spend" style="bottom:calc(100% + 20px)">€20,79</div>
-              <div class="bl-dot" style="bottom:calc(100% + 3px)">3</div>
-            </div>
-          </div>
-          <!-- Jun 20: €20,07 · 6L · 67.0% -->
-          <div class="bc2">
-            <div class="ba" style="height:67.0%">
-              <div class="bl-spend" style="bottom:calc(100% + 20px)">€20,07</div>
-              <div class="bl-dot" style="bottom:calc(100% + 3px)">6</div>
-            </div>
-          </div>
-          <!-- Jun 21: €29,39 · 7L · 98.2% -->
-          <div class="bc2">
-            <div class="ba" style="height:98.2%">
-              <div class="bl-spend" style="bottom:calc(100% + 20px)">€29,39</div>
-              <div class="bl-dot" style="bottom:calc(100% + 3px)">7</div>
-            </div>
-          </div>
-        </div>
-        <div class="dc-baseline"></div>
-        <div class="dc-dates">
-          <div class="bd">15 Jun</div>
-          <div class="bd" style="color:var(--sage)">16 Jun</div>
-          <div class="bd">17 Jun</div>
-          <div class="bd" style="color:var(--sage)">18 Jun</div>
-          <div class="bd">19 Jun</div>
-          <div class="bd">20 Jun</div>
-          <div class="bd">21 Jun</div>
-        </div>
-      </div>
+    <div class="ad-row">
+      <div class="anm">AD10 — Ecoliving [L]</div>
+      <div class="am"><span class="lbl">Invest.</span><span class="val">€34,73</span></div>
+      <div class="am"><span class="lbl">Leads</span><span class="val">11</span></div>
+      <div class="am"><span class="lbl">CPL</span><span class="val">€3,16</span></div>
+      <div class="am"><span class="lbl">CTR</span><span class="val">2,87%</span></div>
+      <div class="am"><span class="lbl">CPC</span><span class="val">€0,13</span></div>
     </div>
-    <div class="dc-legend">
-      <div class="dl-item"><div class="dl-dot" style="background:var(--gold)"></div>Investimento (€)</div>
-      <div class="dl-item"><div class="dl-dot" style="background:var(--sage);border:1px solid var(--sage)"></div>Leads gerados</div>
-      <div class="dl-item"><div class="dl-dot" style="background:var(--sage);opacity:.7"></div>16 e 18 Jun: pico de 11 leads · menor spend, maior conversão</div>
+    <div class="ad-row">
+      <div class="anm">AD05 — Ecoliving [C]</div>
+      <div class="am"><span class="lbl">Invest.</span><span class="val">€22,24</span></div>
+      <div class="am"><span class="lbl">Leads</span><span class="val">5</span></div>
+      <div class="am"><span class="lbl">CPL</span><span class="val">€4,45</span></div>
+      <div class="am"><span class="lbl">CTR</span><span class="val">3,58%</span></div>
+      <div class="am"><span class="lbl">CPC</span><span class="val">€0,11</span></div>
+    </div>
+    <div class="ad-row">
+      <div class="anm">AD05 — Moradia V4 [C]</div>
+      <div class="am"><span class="lbl">Invest.</span><span class="val">€25,07</span></div>
+      <div class="am"><span class="lbl">Leads</span><span class="val">4</span></div>
+      <div class="am"><span class="lbl">CPL</span><span class="val">€6,27</span></div>
+      <div class="am"><span class="lbl">CTR</span><span class="val">2,58%</span></div>
+      <div class="am"><span class="lbl">CPC</span><span class="val">€0,34</span></div>
+    </div>
+    <div class="ad-row">
+      <div class="anm">AD06 — Moradia V3+1</div>
+      <div class="am"><span class="lbl">Invest.</span><span class="val">€12,38</span></div>
+      <div class="am"><span class="lbl">Leads</span><span class="val">3</span></div>
+      <div class="am"><span class="lbl">CPL</span><span class="val">€4,13</span></div>
+      <div class="am"><span class="lbl">CTR</span><span class="val">2,92%</span></div>
+      <div class="am"><span class="lbl">CPC</span><span class="val">€0,19</span></div>
     </div>
   </div>
 
-  <!-- 05 — ANÁLISE -->
-  <div class="sh"><span class="sh-n">05</span><h2 class="sh-t">Análise</h2><div class="sh-l"></div></div>
+  <!-- 05 EVOLUÇÃO DIÁRIA -->
+  <div class="sh"><span class="sh-n">05</span><h2 class="sh-t">Evolução Diária</h2><span class="sh-l"></span></div>
+
+  <div class="diario-card">
+    <div class="twrap"><table>
+      <thead><tr><th>Data</th><th>Invest.</th><th>Leads</th><th>Cliques</th><th>CTR</th></tr></thead>
+      <tbody>
+        <tr class="ctrhi"><td class="date">22 jun · seg</td><td>€21,13</td><td>4</td><td>161</td><td>2,75%</td></tr>
+        <tr><td class="date">23 jun · ter</td><td>€26,52</td><td>9</td><td>141</td><td>2,48%</td></tr>
+        <tr><td class="date">24 jun · qua</td><td>€27,58</td><td>6</td><td>132</td><td>2,11%</td></tr>
+        <tr><td class="date">25 jun · qui</td><td>€25,97</td><td>7</td><td>148</td><td>2,61%</td></tr>
+        <tr class="ctrlo"><td class="date">26 jun · sex</td><td>€22,30</td><td>2</td><td>96</td><td>2,04%</td></tr>
+        <tr><td class="date">27 jun · sáb</td><td>€21,36</td><td>5</td><td>102</td><td>2,54%</td></tr>
+        <tr><td class="date">28 jun · dom</td><td>€32,56</td><td>6</td><td>149</td><td>2,18%</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <!-- 06 LEITURA DA SEMANA -->
+  <div class="sh"><span class="sh-n">06</span><h2 class="sh-t">Leitura da Semana</h2><span class="sh-l"></span></div>
 
   <div class="acard res">
     <div class="act">Resumo Geral</div>
     <div class="ab">
-      A semana de 15 a 21 de junho estabeleceu um novo máximo da conta: <strong>51 leads a CPL médio de €3,37</strong> com €172,01 investidos — um crescimento de +24,4% em volume e −9,9% em custo face à semana anterior. O destaque absoluto é o <strong>Ecoliving [C]</strong>, que entregou 19 leads a CPL €1,82, o melhor resultado de qualquer adset da conta em qualquer semana. A distribuição do orçamento está notavelmente nivelada — os 5 adsets receberam entre €33,91 e €35,05 — mas os resultados divergiram amplamente. O <strong>Terreno Aroeira</strong> confirmou a sua recuperação com +62,5% de leads e CPL −39,6% (€4,47→€2,70), atingindo o melhor CPL de sempre neste adset, com a faixa 65+ a gerar 8 dos 13 leads. A <strong>Moradia V3+1 Aroeira</strong> registou uma queda abrupta: de 11 para 5 leads e CPL que mais que duplicou (€3,19→€6,82) — a CTR e CPC melhoraram, pelo que o problema está na taxa de conversão pós-clique, não no criativo. A <strong>Moradia V4 Aroeira</strong>, na sua primeira semana completa, manteve apenas 4 leads com CPL de €8,48, com a faixa 45–54 a consumir €12,86 sem produzir qualquer lead — um sinal de desalinhamento entre audiência e criativo.
+      Semana de retração face à anterior. O investimento manteve-se praticamente igual (€177,42, +3%), mas os leads caíram de <strong>51 para 39</strong> e o CPL subiu de €3,37 para <em>€4,55</em> (+35%). A causa principal é o colapso do <strong>Ecoliving [C]</strong>, que passou de 19 leads para apenas 6 e viu o CPL disparar de €1,82 para €6,12. O público feminino deste conjunto deixou completamente de converter. Em contrapartida, o <strong>Ecoliving [L]</strong> consolidou-se e ultrapassou o irmão na maioria das métricas — 11 leads contra 6, CPL €3,16. <em>Terreno Aroeira</em> manteve-se firme com 12 leads via Facebook Reels (100% das conversões deste imóvel), enquanto <em>Moradia V4</em> registou a sua segunda semana com melhoria (5 leads, CPL €7,06). O <em>Moradia V3+1</em> precisa de atenção: 5 leads mas com CPC a subir 65% e CTR a cair 20%.
     </div>
   </div>
 
   <div class="acard pla">
     <div class="act">Plano de Ação</div>
     <div class="ab">
-      <strong>Prioridade 1 — Ecoliving [C]: escalar com prudência.</strong> Com CPL de €1,82 e 19 leads em 7 dias, este adset é o motor da conta. Aumentar o orçamento em 20–30% e monitorizar se o CPL sobe acima de €2,50 — se mantiver abaixo, escalar novamente. Atenção especial ao IG Feed (13 leads, CPL €1,54) e às faixas 35–44 e 45–54 que representam 11 dos 19 leads. Évora surgiu como zona relevante: 5 leads a CPL €1,11 com 163 cliques — explorar criativos específicos para esta audiência. <strong>Prioridade 2 — Moradia V3+1: diagnóstico urgente.</strong> A CTR manteve-se (+0,5%) e o CPC caiu (−26,1%), o que significa que o criativo está a funcionar mas os utilizadores não estão a converter na landing page ou formulário. Verificar se houve alteração na landing page, formulário ou URL de destino na semana de 15 Jun. O adset está suspenso no IG Feed (único canal com leads), logo o problema pode ser técnico. <strong>Prioridade 3 — Moradia V4: rever segmentação.</strong> A faixa 45–54 consumiu €12,86 (38% do orçamento) sem produzir nenhum lead — excluir ou reduzir o bid para este segmento. Lisboa gerou apenas 1 lead com €17,81 de spend; Setúbal entregou 3 leads a CPL €3,89 com spend semelhante — redistribuir orçamento geográfico para Setúbal e arredores. <strong>Nota:</strong> Ecoliving [L] apresenta a sua melhor semana (+66,7% leads, CPL −37%). Manter o orçamento atual e acompanhar a evolução de Évora como nova zona emergente deste adset.
+      Quatro métricas principais pioraram a nível conta — CTR (-24,7%), CPC (+35,7%), Leads (-23,5%) e CPL (+35%). A causa concentra-se essencialmente em dois imóveis. <strong>Primeiro, o Ecoliving [C]:</strong> €18,25 dirigidos a público feminino sem qualquer lead, quando esta mesma faixa era a melhor há uma semana. Isto sinaliza saturação criativa específica do segmento — o ângulo visual ou copy deixou de comunicar com elas. <strong>Segundo, o Moradia V3+1:</strong> os criativos estão claramente desgastados, com CTR em queda contínua e CPC a subir abruptamente. As ações: <em>(a) renovar urgentemente os criativos do Ecoliving [C]</em>, particularmente com ângulos novos para o público feminino (testar imagens reais do projeto, depoimentos, foco em planta/espaços comuns); <em>(b) ajustar o orçamento entre conjuntos</em>, retirando 30-40% do Moradia V3+1 e do [C] e reforçando o [L] e o Terreno, que continuam a converter abaixo do custo médio; <em>(c) considerar pausa parcial do Moradia V3+1</em> até serem testados novos criativos. Esperamos resultados visíveis até ao final da próxima semana.
     </div>
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    <div class="fl">LivingWell Properties &nbsp;·&nbsp; Relatório Meta Ads &nbsp;·&nbsp; Gerado em 22 Jun 2026</div>
-    <div class="fr">act_938859788941998 &nbsp;·&nbsp; 15–21 Jun 2026</div>
+    <span class="fl">4Improvements · Meta MCP · v21.0</span>
+    <span class="fr">30 Jun 2026 · LivingWell Properties</span>
   </div>
 
 </div>
